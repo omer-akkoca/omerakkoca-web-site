@@ -1,1 +1,2 @@
-# Omer Akkoca Personal Wen Site
+# Omer Akkoca Personal Web Site
+**omerakkoca.com**
