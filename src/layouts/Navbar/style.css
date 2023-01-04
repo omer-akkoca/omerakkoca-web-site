@@ -1,0 +1,141 @@
+:root {
+    --navbar_height: 45px;
+}
+
+nav{
+    position: fixed;
+    top: calc(100% - var(--navbar_height));
+    left: 0;
+    width: 100%;
+    -webkit-box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.25);
+}
+
+.navbar-inner{
+    height: var(--navbar_height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-inner .logo{
+    width: var(--navbar_height);
+    height: var(--navbar_height);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-inner .logo h1{
+    font-size: 2.5em;
+    font-family: "Nunito-Bold";
+    color: black;
+    letter-spacing: -2.5px;
+}
+
+.navbar-inner ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.navbar-inner ul li{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-inner ul li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-inner ul li:not(.drop-down):hover{
+    background-color: orange;
+}    
+
+.navbar-inner ul li.drop-down{
+    flex: 2;
+}
+
+.navbar-inner ul li h1{
+    font-family: "Nunito-Bold";
+    font-size: 16px;
+    color: black;
+    display: none;
+    user-select: none;
+}
+
+.navbar-inner ul li .icon{
+    width: calc(var(--navbar_height) / 2.5);
+    height: calc(var(--navbar_height) / 2.5);
+}
+
+.navbar-inner ul li .icon img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media screen and (min-width: 475px) {
+    .navbar-inner ul li .icon{
+        width: calc(var(--navbar_height) / 2);
+        height: calc(var(--navbar_height) / 2);
+    }
+    :root {
+        --navbar_height: 55px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    nav{
+        top: 0;
+        box-shadow: none;
+    }
+    .navbar-inner .logo{
+        display: flex;
+    }
+    .navbar-inner ul{
+        width: auto;
+    }
+    .navbar-inner ul li{
+        width: 150px;
+    }
+    .navbar-inner ul li.drop-down{
+        width: 150px;
+        flex: 1;
+    }
+    .navbar-inner ul li:hover{
+        background-color: orange;
+    }    
+    .navbar-inner ul li.drop-down:hover ul{
+        display: flex;
+    }
+    .navbar-inner ul li ul{
+        position: absolute;
+        bottom: calc(-2 * var(--navbar_height));
+        left: 0;
+        width: 100%;
+        height: calc(2 * var(--navbar_height));
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    .navbar-inner ul li h1{
+        display: block;
+    }
+    .navbar-inner ul li .icon{
+        display: none;
+    }
+}

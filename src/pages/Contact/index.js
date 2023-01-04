@@ -1,11 +1,13 @@
 import React from "react";
+import { Navbar } from "../../layouts";
 
 class Contact extends React.Component{
-    render(){
-        return(
-            <div>
+    render() {
+        return (
+            <section id="contact">
+                <Navbar />
                 <h1>CONTACT</h1>
-            </div>
+            </section>
         )
     }
 }

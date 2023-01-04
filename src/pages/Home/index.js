@@ -1,11 +1,14 @@
 import React from "react";
+import "./style.css"
+import { Navbar } from "../../layouts"; 
 
 class Home extends React.Component{
     render(){
         return(
-            <div>
+            <section id="home">
+                <Navbar/>
                 <h1>HOME</h1>
-            </div>
+            </section>
         )
     }
 }
