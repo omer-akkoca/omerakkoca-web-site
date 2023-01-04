@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css"
 import { Navbar } from "../../layouts"; 
 
 class Home extends React.Component{
