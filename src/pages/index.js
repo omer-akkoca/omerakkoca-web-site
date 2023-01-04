@@ -1,0 +1,6 @@
+export { Home } from "./Home"
+export { AboutMe } from "./AboutMe"
+export { PlacesVisited } from "./PlacesVisited"
+export { BooksRead } from "./BooksRead"
+export { Contact } from "./Contact"
+export { NotFound } from "./NotFound"
