@@ -2,10 +2,13 @@ Screen Breakpoints
 
 it is mobile size by default
 
-/* todo: tablet size */
-@media screen and (min-width: 475px) {}
+/* todo: too small screen */
+@media screen and (max-width: 325px) {}
 
 /* todo: small screen */
+@media screen and (min-width: 475px) {}
+
+/* todo: tablet size */
 @media screen and (min-width: 800px) {}
 
 /* todo: medium screen */

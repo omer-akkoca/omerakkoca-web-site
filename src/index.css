@@ -7,6 +7,11 @@
   text-decoration: none;
 }
 
+html, body, #root{
+  height: 100%;
+  overflow-x: hidden;
+}
+
 section{
   padding-top: 0;
   padding-bottom: var(--navbar_height);

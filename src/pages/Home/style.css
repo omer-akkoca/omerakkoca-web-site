@@ -1,0 +1,161 @@
+#home{
+    min-height: 100%;
+    overflow-y: auto;
+    padding: 50px 0 calc(var(--navbar_height) + 25px) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .home-inner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-inner .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-inner .content .profile-picture,.user-titles{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-inner .content .profile-picture{
+    margin-bottom: 25px;
+}
+
+.home-inner .content .profile-picture img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100%;
+    user-select: none;
+    -webkit-box-shadow: 10px 10px 19px -4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 19px -4px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 19px -4px rgba(0,0,0,0.5);
+}
+
+.home-inner .content .user-titles{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home-inner .content .user-titles > *:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.home-inner .content .user-titles h1{
+    font-family: "Nunito-Bold";
+    font-size: 2.5em;
+}
+
+.home-inner .content .user-titles h2{
+    font-family: "Nunito-Medium";
+    font-size: 1em;
+}
+
+.home-inner .content .user-titles .button-wrapper{
+    margin-top: 10px;
+    width: 90%;
+}
+
+.download-cv{
+    width: 100%;
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Nunito-SemiBold";
+    font-size: 1rem;
+    line-height: 1;
+    padding: 1rem 0rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 2px 5px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.download-cv:hover {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+@media screen and (max-width: 325px) {
+    .home-inner .content .profile-picture img{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 475px) {
+    .home-inner .content .profile-picture img{
+        width: 350px;
+        height: 350px;
+    }
+    .home-inner .content .user-titles h1{
+        font-family: "Nunito-Bold";
+        font-size: 3em;
+    }
+    .home-inner .content .user-titles h2{
+        font-size: 1.75em;
+    }
+    .download-cv{
+        width: auto;
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .home-inner .content .profile-picture img{
+        width: 375px;
+        height: 375px;
+    }
+    .download-cv {
+        font-size: 1.125rem;
+        padding: 1rem 5rem;
+    }
+    .home-inner .content .user-titles h1{
+        font-family: "Nunito-Bold";
+        font-size: 5em;
+    }
+    #home{
+        padding: calc(var(--navbar_height) + 25px) 0 50px 0;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .home-inner .content{
+        flex-direction: row;
+    }
+    .home-inner .content .profile-picture{
+        margin-bottom: 0;
+    }
+    .home-inner .content .profile-picture img{
+        width: 450px;
+        height: 450px;
+    }
+
+}
+
+
+@media screen and (min-width: 1500px) {
+    .home-inner .content .profile-picture img{
+        width: 550px;
+        height: 550px;
+    }
+}
