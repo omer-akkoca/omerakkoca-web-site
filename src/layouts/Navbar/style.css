@@ -79,8 +79,8 @@ nav{
 }
 
 .navbar-inner ul li .icon{
-    width: calc(var(--navbar_height) / 2.5);
-    height: calc(var(--navbar_height) / 2.5);
+    width: calc(var(--navbar_height) / 2.1);
+    height: calc(var(--navbar_height) / 2.1);
 }
 
 .navbar-inner ul li .icon img{
