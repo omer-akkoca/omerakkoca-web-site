@@ -104,6 +104,7 @@ nav{
     nav{
         top: 0;
         box-shadow: none;
+        background-color: transparent;
     }
     .navbar-inner .logo{
         display: flex;
