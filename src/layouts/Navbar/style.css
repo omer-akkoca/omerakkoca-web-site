@@ -1,10 +1,12 @@
 :root {
     --navbar_height: 45px;
+    --navbar_options_width: 150px;
 }
 
 nav{
     position: fixed;
-    top: calc(100% - var(--navbar_height));
+    /*top: calc(100% - var(--navbar_height));*/
+    bottom: 0;
     left: 0;
     width: 100%;
     -webkit-box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.25);
@@ -33,7 +35,7 @@ nav{
 .navbar-inner .logo h1{
     font-size: 2.5em;
     font-family: "Nunito-Bold";
-    color: black;
+    color: var(--dark_text);
     letter-spacing: -2.5px;
 }
 
@@ -75,7 +77,7 @@ nav{
 .navbar-inner ul li h1{
     font-family: "Nunito-Bold";
     font-size: 16px;
-    color: black;
+    color: var(--dark_text);
     display: none;
     user-select: none;
 }
@@ -101,10 +103,31 @@ nav{
 }
 
 @media screen and (min-width: 800px) {
+    :root {
+        --navbar_options_width: 140px;
+    }
     nav{
+        position: absolute;
         top: 0;
+        height: var(--navbar_height);
         box-shadow: none;
         background-color: transparent;
+    }
+    nav.scrolled-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: var(--navbar_height);
+        background-color: white;
+        -webkit-box-shadow: -5px 0 8px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: -5px 0 8px 0px rgba(0,0,0,0.25);
+        box-shadow: -5px 0 8px 0px rgba(0,0,0,0.25);
+    }
+    nav.scrolled-nav .navbar-inner ul li:hover{
+        background-color: var(--dark_text);
+    }
+    nav.scrolled-nav .navbar-inner ul li:hover h1:not(.drop-down ul li h1){
+        color: white;
     }
     .navbar-inner .logo{
         display: flex;
@@ -113,11 +136,20 @@ nav{
         width: auto;
     }
     .navbar-inner ul li{
-        width: 150px;
+        width: var(--navbar_options_width);
     }
     .navbar-inner ul li.drop-down{
-        width: 150px;
+        width: var(--navbar_options_width);
         flex: 1;
+    }
+    .navbar-inner ul li.drop-down:hover ul{
+        background-color: white;
+    }
+    .navbar-inner ul li.drop-down:hover ul li:hover{
+        background-color: var(--dark_text);
+    }
+    .navbar-inner ul li.drop-down:hover ul li:hover h1{
+        color: white;
     }
     .navbar-inner ul li:hover{
         background-color: white;
@@ -135,10 +167,26 @@ nav{
         flex-direction: column;
         display: none;
     }
+    nav.scrolled-nav .navbar-inner ul li ul{
+        background-color: white;
+    }
     .navbar-inner ul li h1{
         display: block;
     }
     .navbar-inner ul li .icon{
         display: none;
     }
+}
+
+@media screen and (min-width: 1100px) {
+    :root {
+        --navbar_options_width: 150px;
+    }
+    .navbar-inner ul li{
+        width: var(--navbar_options_width);
+    }
+    .navbar-inner ul li ul li{
+        width: var(--navbar_options_width);
+    }
+
 }

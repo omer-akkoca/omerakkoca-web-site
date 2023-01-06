@@ -1,14 +1,11 @@
 #home{
-    min-height: 100%;
-    overflow-y: auto;
+    min-height: 100vh;
+    overflow-y: hidden;
     padding: 50px 0 calc(var(--navbar_height) + 25px) 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url("../../assets/images/home-bg.jpg");
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
     background: white url("../../assets/images/home-bg.jpg") no-repeat fixed center;
 }
 
