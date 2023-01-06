@@ -5,6 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../../assets/images/home-bg.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background: white url("../../assets/images/home-bg.jpg") no-repeat fixed center;
 }
 
 #home .home-inner{
@@ -62,6 +67,7 @@
 .home-inner .content .user-titles h2{
     font-family: "Nunito-Medium";
     font-size: 1em;
+    color: var(--dark_text);
 }
 
 .home-inner .content .user-titles .button-wrapper{
@@ -110,6 +116,7 @@
     .home-inner .content .user-titles h1{
         font-family: "Nunito-Bold";
         font-size: 3em;
+        color: var(--dark_text);
     }
     .home-inner .content .user-titles h2{
         font-size: 1.75em;
