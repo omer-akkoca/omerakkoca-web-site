@@ -65,7 +65,7 @@ nav{
 }
 
 .navbar-inner ul li:not(.drop-down):hover{
-    background-color: orange;
+    background-color: white;
 }    
 
 .navbar-inner ul li.drop-down{
@@ -120,7 +120,7 @@ nav{
         flex: 1;
     }
     .navbar-inner ul li:hover{
-        background-color: orange;
+        background-color: white;
     }    
     .navbar-inner ul li.drop-down:hover ul{
         display: flex;
