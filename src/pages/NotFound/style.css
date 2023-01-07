@@ -1,0 +1,81 @@
+#not-found{
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white url("../../assets/images/home-bg.jpg") no-repeat fixed center;
+}
+
+#not-found .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+}
+
+#not-found .content h1{
+    font-size: 9em;
+    font-family: "Nunito-Black";
+    letter-spacing: 5px;
+}
+
+#not-found .content h2{
+    font-size: 1em;
+    font-family: "Nunito-SemiBold";
+    margin-top: -10px;
+}
+
+.go-back{
+    width: 300px;
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Nunito-SemiBold";
+    font-size: 1rem;
+    line-height: 1;
+    padding: 1rem 0rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 2px 5px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 50px;
+}
+
+.go-back:hover {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+/* todo: small screen */
+@media screen and (min-width: 475px) {}
+
+/* todo: tablet size */
+@media screen and (min-width: 800px) {}
+
+/* todo: medium screen */
+@media screen and (min-width: 1100px) {
+    #not-found .content h1{
+        font-size: 25em;
+        letter-spacing: 50px;
+        margin-top: -50px;
+    }
+    #not-found .content h2{
+        font-size: 2em;
+    }
+    .go-back{
+        margin-top: 40px;
+    }
+    
+}
+
+/* todo: large screen */
+@media screen and (min-width: 1500px) {}
