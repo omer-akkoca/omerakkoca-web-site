@@ -9,12 +9,11 @@ const Navbar = () => {
     const navbar = useRef()
 
     window.addEventListener("scroll",(e) => {
-        if (window.scrollY > 1) {
-            navbar.current.classList.add("scrolled-nav")
-        } else if (window.scrollY < 1) {
-            navbar.current.classList.remove("scrolled-nav")
+        if (window.scrollY > 50) {
+            navbar.current?.classList.add("scrolled-nav")
+        } else if (window.scrollY < 50) {
+            navbar.current?.classList.remove("scrolled-nav")
         }
-        console.log(e)
     })
 
     return (

@@ -16,3 +16,6 @@ it is mobile size by default
 
 /* todo: large screen */
 @media screen and (min-width: 1500px) {}
+
+/* todo: xlarge screen */
+@media screen and (min-width: 1750px) {}

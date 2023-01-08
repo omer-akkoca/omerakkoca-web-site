@@ -14,6 +14,7 @@ nav{
     box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.25);
     background-color: white;
     z-index: 99;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
 }
 
 .navbar-inner{
@@ -55,6 +56,7 @@ nav{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
 }
 
 .navbar-inner ul li a{
@@ -80,6 +82,7 @@ nav{
     color: var(--dark_text);
     display: none;
     user-select: none;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
 }
 
 .navbar-inner ul li .icon{
@@ -93,12 +96,12 @@ nav{
 }
 
 @media screen and (min-width: 475px) {
+    :root {
+        --navbar_height: 50px;
+    }
     .navbar-inner ul li .icon{
         width: calc(var(--navbar_height) / 2);
         height: calc(var(--navbar_height) / 2);
-    }
-    :root {
-        --navbar_height: 55px;
     }
 }
 

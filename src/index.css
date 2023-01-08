@@ -11,6 +11,10 @@
   text-decoration: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 html, body, #root{
   overflow-x: hidden;
 }
@@ -20,13 +24,42 @@ section{
   padding-bottom: var(--navbar_height);
 }
 
+.custom-button{
+  width: 100%;
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Nunito-SemiBold";
+  font-size: 1rem;
+  line-height: 1;
+  padding: 1rem 0rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .25s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 2px 5px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.custom-button:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
 @media screen and (min-width: 800px) {
   section{
     padding-top: var(--navbar_height);
     padding-bottom: 0;
   }
+  .custom-button {
+    font-size: 1.125rem;
+    padding: 1rem 5rem;
+  }
 }
-
 
 /* todo: FONTS ADDED */
 @font-face {
