@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../components";
+import { Footer, Header } from "../../components";
 import { Navbar } from "../../layouts";
 import { ABOUT_ME_HEADER } from "../../assets/images";
 
@@ -12,6 +12,7 @@ class AboutMe extends React.Component{
             <section id="about-me">
                 <Navbar />
                 <Header title={"about me"} image={ABOUT_ME_HEADER} text={xd}/>
+                <Footer/>
             </section>
         )
     }
