@@ -7,16 +7,15 @@ const Header = ({ image, text }) => {
 
     const handleOnClick = () => {
         const height = header.current.offsetHeight
-        console.log("height: ", height)
-        window.scrollTo(0,height-45)
+        window.scrollTo(0,height)
     }
 
     return(
-        <>
+        <div  ref={header}>
             <div className="mobile-page-title">
                 <h1>About Me</h1>
             </div>
-            <header ref={header}>
+            <header>
                 <div className="img-bg" style={{ backgroundImage: `url(${image})` }}></div>
                 <div className="content">
                     <p>{text}</p>
@@ -25,7 +24,7 @@ const Header = ({ image, text }) => {
                     </button>
                 </div>
             </header>
-        </>
+        </div>
     )
 }
 
