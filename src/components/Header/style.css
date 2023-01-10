@@ -47,7 +47,7 @@ header .content{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(13, 23, 42, .8);
+    background-color: var(--transparent_dark);
     z-index: 50;
     padding: 15px;
     text-align: center;
