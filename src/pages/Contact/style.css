@@ -1,3 +1,93 @@
 #contact{
+    width: 100%;
+}
 
+#contact .content-wrapper{
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+#contact .content-wrapper .contact-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .content-wrapper .contact-content div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#contact .contact-content div.infos{
+    flex-direction: column;
+}
+
+#contact .contact-content div.infos tr{
+    display: flex;
+    flex-direction: row;
+}
+
+#contact .contact-content div.infos td{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#contact .contact-content div.infos tr td p{
+    font-size: 12px;
+    font-family: "Nunito-Bold";
+}
+
+.social-media{
+    padding: 25px 0;
+}
+
+.social-media a{
+    margin-right: 10px;
+    transition: all .25s cubic-bezier(.4, 0, .2, 1);
+}
+
+.social-media a:last-of-type{
+    margin-right: 0;
+}
+
+.social-media a:hover{
+    opacity: 0.8;
+}
+
+.social-media a img{
+    width: 35px;
+    height: 35px;
+}
+
+@media screen and (min-width: 800px) {
+    #contact .content-wrapper{
+        margin-bottom: var(--navbar_height);
+    }
+    #contact .content-wrapper .contact-content{
+        flex-direction: row;
+    }
+    #contact .contact-content div.infos tr td p{
+        font-size: 14px;
+    }
+    .social-media{
+        padding: 0;
+    }    
+}
+
+@media screen and (min-width: 1500px) {
+    .social-media a img {
+        width: 50px;
+        height: 50px;
+    }
+    .social-media a {
+        margin-right: 25px;
+    }
+    .social-media a:last-of-type {
+        margin-right: 0;
+    }
 }
