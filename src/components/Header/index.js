@@ -7,7 +7,9 @@ const Header = ({ title, image, text }) => {
 
     const handleOnClick = () => {
         const height = header.current.offsetHeight
-        window.scrollTo(0,height)
+        const width = window.innerWidth
+        const scrool_value = width > 800 ? height - 45 : height
+        window.scrollTo(0,scrool_value)
     }
 
     return(

@@ -46,11 +46,6 @@ footer .content ul li h1{
 @media screen and (min-width: 800px) {
     footer{
         padding: 0;
-        position: absolute;
-        bottom: var(--navbar_height);
-        bottom: 0;
-        left: 0;
-        width: 100%;
     }
     footer .content{
         display: flex;
