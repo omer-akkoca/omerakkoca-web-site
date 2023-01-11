@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./style.css"
 
-const Header = ({ image, text }) => {
+const Header = ({ title, image, text }) => {
 
     const header = useRef()
 
@@ -13,7 +13,7 @@ const Header = ({ image, text }) => {
     return(
         <div  ref={header}>
             <div className="mobile-page-title">
-                <h1>About Me</h1>
+                <h1>{title}</h1>
             </div>
             <header>
                 <div className="img-bg" style={{ backgroundImage: `url(${image})` }}></div>
