@@ -82,6 +82,7 @@ header .content .custom-button{
     header {
         height: 500px;
         margin-top: calc(-1 * var(--navbar_height));
+        margin-bottom: 50px;
     }
     header .content {
         width: 75%;

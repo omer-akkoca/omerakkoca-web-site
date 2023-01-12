@@ -1,6 +1,7 @@
 :root {
   --dark_text: #0d172a;
   --transparent_dark: rgba(13, 23, 42, .8);
+  --transition: all .25s cubic-bezier(.4, 0, .2, 1)
 }
 
 *{
