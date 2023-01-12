@@ -13,8 +13,13 @@ import TWITTER from "./social-media/twitter.png"
 import GITHUB from "./social-media/github.png"
 import LINKEDIN from "./social-media/linkedin.png"
 
+import DETAILS from "./details.png"
+import FULL_SCREEN from "./full-screen.png"
+import CANCEL from "./cancel.png"
+
 export { 
     HOME, ABOUT_ME, PLACES_VISITED, BOOKS_READ, CONTACT,
     ABOUT_ME_HEADER, CONTACT_HEADER, PLACES_VISITED_HEADER,
-    FACEBOOK, INSTAGRAM, TWITTER, GITHUB, LINKEDIN
+    FACEBOOK, INSTAGRAM, TWITTER, GITHUB, LINKEDIN,
+    DETAILS, FULL_SCREEN, CANCEL
 }
