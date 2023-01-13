@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./style.css"
 import { DETAILS, FULL_SCREEN, CANCEL } from "../../../../assets/images";
 
-const VisitedCard = () => {
+const VisitedCard = ({ data, openModal }) => {
 
     const desc_content = useRef()
 
@@ -21,8 +21,8 @@ const VisitedCard = () => {
         <div className="visited-card">
             <div className="img-content">
                 <img
-                    src="https://firebasestorage.googleapis.com/v0/b/omer-akkoca.appspot.com/o/visits%2Fomer-2.jpg?alt=media&token=c9621ae1-2331-4215-8530-1ae07ec82029"
-                    alt="photo"
+                    src={data}
+                    alt="omers-visite-place"
                 />
                 <div className="buttons">
                     <div onClick={handleToggleDesc}>
@@ -31,7 +31,7 @@ const VisitedCard = () => {
                             alt="details"
                         />
                     </div>
-                    <div>
+                    <div onClick={() => openModal(data)}>
                         <img
                             src={FULL_SCREEN}
                             alt="full-screen"
