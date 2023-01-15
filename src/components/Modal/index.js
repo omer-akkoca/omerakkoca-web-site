@@ -20,6 +20,10 @@ class Modal extends React.Component{
         Modal.instance = this
     }
 
+    componentWillUnmount(){
+        Modal.instance.hide()
+    }
+
     hide = () => {
         this.setState({ visible: false })
     }
