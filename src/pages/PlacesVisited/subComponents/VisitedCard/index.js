@@ -21,7 +21,7 @@ const VisitedCard = ({ data, openModal }) => {
         <div className="visited-card">
             <div className="img-content">
                 <img
-                    src={data}
+                    src={data?.img}
                     alt="omers-visite-place"
                 />
                 <div className="buttons">
@@ -31,7 +31,7 @@ const VisitedCard = ({ data, openModal }) => {
                             alt="details"
                         />
                     </div>
-                    <div onClick={() => openModal(data)}>
+                    <div onClick={() => openModal(data?.img)}>
                         <img
                             src={FULL_SCREEN}
                             alt="full-screen"
@@ -40,15 +40,11 @@ const VisitedCard = ({ data, openModal }) => {
                 </div>
             </div>
             <div ref={desc_content} className="desc-content">
-                <h1>İstanbul Esenceli Piknik Alanı</h1>
+                <h1>{data?.location}</h1>
                 <div className="time">
-                    <time dateTime="2019-06-05">05 06 2019</time>
+                    <time dateTime="2019-06-05">{data?.date}</time>
                 </div>
-                <p>
-                    Aile piknikleri... bu her yaz bizim gelenekselleşmiş, akrabalarımız ile birlikte yaptığımız 
-                    bir piknik olmuştur. Tabi bu pikniklerde yaptığımız yüksek seviyede çekişme ve mızıkçılık 
-                    olan volaybol maçlarımız bu pikniklere dahada eğlence katar.
-                </p>
+                <p>{data?.description}</p>
                 <div className="buttons">
                     <div onClick={handleToggleDesc}>
                         <img
