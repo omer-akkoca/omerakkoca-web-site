@@ -2,7 +2,7 @@ import { collection, getDocs } from "firebase/firestore"
 import { firestore } from "../library/firebase";
 
 class FirebaseRequests {
-    static async getFirestore({ collection_name= "" }) {
+    async getFirestore({ collection_name= "" }) {
         const data = []
         const querySnapshot = await getDocs(collection(firestore, collection_name))
         querySnapshot.forEach((doc) => {
@@ -17,4 +17,4 @@ class FirebaseRequests {
     }
 }
 
-export { FirebaseRequests }
+export default FirebaseRequests;

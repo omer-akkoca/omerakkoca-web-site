@@ -4,7 +4,7 @@ import { Container, Footer, Header, Modal } from "../../components";
 import { Navbar } from "../../layouts";
 import { PLACES_VISITED_HEADER } from "../../assets/images";
 import { VisitedCard } from "./subComponents/VisitedCard";
-import { FirebaseRequests } from "../../requests/firebaseRequests";
+import { FirebaseClient } from "../../requests";
 
 const xd = "Çalışmanın önemli olduğu kadar dünyayı gezip yeni insanlarla tanışmakta bir o kadar önemlidir. Hadi sizinle nereleri seyahet ettiğime bakalım."
 
@@ -15,7 +15,7 @@ class PlacesVisited extends React.Component{
     }
 
     async componentDidMount (){
-        const { data } = await FirebaseRequests.getFirestore({ collection_name: "visited-places" })
+        const { data } = await FirebaseClient.getFirestore({ collection_name: "visited-places" })
         this.setState({ visits_data: data })
     }
 
