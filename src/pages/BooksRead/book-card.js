@@ -10,10 +10,14 @@ const BookCard = ({ data }) => {
                         alt={data.name}
                     />
                 </div>
-                <div className="back-face">
-                    <h1>{data.name}</h1>
-                    <h2>{data.writer}</h2>
-                    <p>{data.text}</p>
+                <div className="back-face" style={{ backgroundImage: `url(${data.img})` }}>
+                    <div className="back-face-content">
+                        <h1>{data.name}</h1>
+                        <h2>{data.writer}</h2>
+                        <div className="line"/>
+                        <h3>{data.startDay} - {data.endDay}</h3>
+                        <p>{data.text}</p>
+                    </div>
                 </div>
             </div>
         </div>
