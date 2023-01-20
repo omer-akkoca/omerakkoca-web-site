@@ -7,6 +7,8 @@ import { FirebaseClient } from "../../requests";
 
 const xd = "Welcome to my web site. Here is like my personal information page. You can see where did i work, what software language i know, my personal profile live etc. I hope you can find what you are looking for."
 
+
+
 class AboutMe extends React.Component{
 
     state = {
@@ -20,6 +22,7 @@ class AboutMe extends React.Component{
     }
 
     render(){
+        const { software_languages } = this.state
         return (
             <section id="about-me">
                 <Navbar />
@@ -27,7 +30,24 @@ class AboutMe extends React.Component{
                 <div className="about-me-wrapper">
                     <Container>
                         <div className="about-content">
-
+                            <div className="element">
+                                <h1>software languages i know</h1>
+                                <div className="language-card-container">
+                                    {
+                                        software_languages.map(e => (
+                                            <div key={e.id} className="language-card-wrapper">
+                                                <div className="language-card">
+                                                    <img
+                                                        src={e.src}
+                                                        alt={e.name}
+                                                    />
+                                                    <h3>{e.name}</h3>
+                                                </div>    
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </Container>
                 </div>

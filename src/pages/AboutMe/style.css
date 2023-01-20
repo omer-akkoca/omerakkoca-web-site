@@ -1,0 +1,74 @@
+.about-content .element{
+    margin-bottom: 50px;
+}
+
+.element h1{
+    text-align: center;
+    color: var(--dark_text);
+    font-family: "Nunito-Black";
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.element .language-card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 25px;
+}
+
+.language-card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.language-card img{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+}
+
+.language-card h3{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: "Nunito-Bold";
+}
+
+@media screen and (min-width: 475px) {
+    .element .language-card-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .language-card img{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .element .language-card-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .language-card img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .element .language-card-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .language-card img{
+        width: 64px;
+        height: 64px;
+    }
+}
