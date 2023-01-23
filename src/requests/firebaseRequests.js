@@ -1,7 +1,8 @@
-import { collection, getDocs, query, orderBy } from "firebase/firestore"
-import { firestore, } from "../library/firebase";
+import { collection, getDocs, query, orderBy, doc, getDoc } from "firebase/firestore"
+import { firestore } from "../library/firebase";
 
 class FirebaseRequests {
+
     async getFirestore({ collection_name = "", order_by = "id" }) {
         const data = []
         const dataRef = collection(firestore, collection_name)
@@ -17,6 +18,24 @@ class FirebaseRequests {
 
         return { data }
     }
+
+    async getDocument({ collection_name= "", document_name= "" }) {
+        let x = {
+            data: undefined,
+            error:  undefined
+        }
+        const docRef = doc(firestore, collection_name, document_name)
+        const docSnap = await getDoc(docRef)
+
+        if (docSnap.exists()) {
+            x.data = docSnap.data()
+        } else {
+            x.error = "document_did_not_reading"
+        }
+
+        return x;
+    }
+
 }
 
 export default FirebaseRequests;

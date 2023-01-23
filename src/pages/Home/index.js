@@ -2,8 +2,21 @@ import React from "react";
 import "./style.css"
 import { Navbar } from "../../layouts"; 
 import { Container } from "../../components";
+import { FirebaseClient } from "../../requests";
 
 class Home extends React.Component{
+    
+    state = {
+        cv_url: ""
+    }
+
+    async componentDidMount(){
+        const { data, error } = await FirebaseClient.getDocument({ collection_name: "about-me", document_name: "cv" })
+        if (data) {
+            this.setState({ cv_url: data.url })
+        }
+    }
+
     render(){
         return(
             <section id="home">
@@ -22,7 +35,9 @@ class Home extends React.Component{
                                 <h2>Software Engineer</h2>
                                 <h2>Front-End Developer</h2>
                                 <div className="button-wrapper">
-                                    <button className="download-cv">Downlaod CV</button>
+                                    <a href={this.state.cv_url} download="omer-akkoca-cv" target="_blank" rel="noreferrer">
+                                        <button className="download-cv">Downlaod CV</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
