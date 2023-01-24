@@ -3,7 +3,7 @@ import "./style.css"
 import { Container, Footer, Header, Modal } from "../../components";
 import { Navbar } from "../../layouts";
 import { PLACES_VISITED_HEADER } from "../../assets/images";
-import { VisitedCard } from "./subComponents/VisitedCard";
+import { VisitedCard } from "./visitedCard";
 import { FirebaseClient } from "../../requests";
 
 const xd = "Çalışmanın önemli olduğu kadar dünyayı gezip yeni insanlarla tanışmakta bir o kadar önemlidir. Hadi sizinle nereleri seyahet ettiğime bakalım."
