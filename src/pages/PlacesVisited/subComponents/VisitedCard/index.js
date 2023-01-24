@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./style.css"
 import { DETAILS, FULL_SCREEN, CANCEL } from "../../../../assets/images";
+import { Image } from "../../../../components";
 
 const VisitedCard = ({ data, openModal }) => {
 
@@ -20,19 +21,21 @@ const VisitedCard = ({ data, openModal }) => {
     return (
         <div className="visited-card">
             <div className="img-content">
-                <img
+                <Image
                     src={data?.img}
                     alt="omers-visite-place"
+                    width="250"
+                    height="250"
                 />
                 <div className="buttons">
                     <div onClick={handleToggleDesc}>
-                        <img
+                        <Image
                             src={DETAILS}
                             alt="details"
                         />
                     </div>
                     <div onClick={() => openModal(data?.img)}>
-                        <img
+                        <Image
                             src={FULL_SCREEN}
                             alt="full-screen"
                         />
@@ -47,7 +50,7 @@ const VisitedCard = ({ data, openModal }) => {
                 <p>{data?.description}</p>
                 <div className="buttons">
                     <div onClick={handleToggleDesc}>
-                        <img
+                        <Image
                             src={CANCEL}
                             alt="details"
                         />

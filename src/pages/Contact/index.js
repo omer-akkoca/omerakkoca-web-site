@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css"
 import { Navbar } from "../../layouts";
-import { Container, Footer, Header } from "../../components";
+import { Container, Footer, Header, Image } from "../../components";
 import { CONTACT_HEADER } from "../../assets/images";
 import { IoLocation, IoMail } from "react-icons/io5"
 import { AiTwotonePhone } from "react-icons/ai"
@@ -63,9 +63,11 @@ class Contact extends React.Component{
                                 {
                                     social_media.map((e,i) => (
                                         <a key={i.toString()} href={e.url} target="_blank" rel="noreferrer">
-                                            <img
+                                            <Image
                                                 src={e.img}
                                                 alt="social"
+                                                width="25"
+                                                height="25"
                                             />
                                         </a>
                                     ))

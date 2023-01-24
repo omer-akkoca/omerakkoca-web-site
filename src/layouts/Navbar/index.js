@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./style.css"
-import { Container } from "../../components"
+import { Container, Image } from "../../components"
 import { Link } from "react-router-dom";
 import { ABOUT_ME, BOOKS_READ, CONTACT, HOME, PLACES_VISITED } from "../../assets/images"
 
@@ -30,7 +30,7 @@ const Navbar = () => {
                             <Link to={"/"}>
                                 <h1>Home</h1>
                                 <div className="icon">
-                                    <img src={HOME} alt="home" />
+                                    <Image src={HOME} alt="home" />
                                 </div>
                             </Link>
                         </li>
@@ -38,7 +38,7 @@ const Navbar = () => {
                             <Link to={"/about-me"}>
                                 <h1>About Me</h1>
                                 <div className="icon">
-                                    <img src={ABOUT_ME} alt="home" />
+                                    <Image src={ABOUT_ME} alt="home" />
                                 </div>
                             </Link>
                         </li>
@@ -49,7 +49,7 @@ const Navbar = () => {
                                     <Link to={"/places-visited"}>
                                         <h1>Places Visited</h1>
                                         <div className="icon">
-                                            <img src={PLACES_VISITED} alt="home" />
+                                            <Image src={PLACES_VISITED} alt="home" />
                                         </div>
                                     </Link>
                                 </li>
@@ -57,7 +57,7 @@ const Navbar = () => {
                                     <Link to={"/books-read"}>
                                         <h1>Books Read</h1>
                                         <div className="icon">
-                                            <img src={BOOKS_READ} alt="home" />
+                                            <Image src={BOOKS_READ} alt="home" />
                                         </div>
                                     </Link>
                                 </li>
@@ -67,7 +67,7 @@ const Navbar = () => {
                             <Link to={"/contact"}>
                                 <h1>Contact</h1>
                                 <div className="icon">
-                                    <img src={CONTACT} alt="home" />
+                                    <Image src={CONTACT} alt="home" />
                                 </div>
                             </Link>
                         </li>

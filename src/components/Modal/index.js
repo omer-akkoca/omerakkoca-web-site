@@ -2,6 +2,7 @@ import React from "react"
 import { createPortal } from 'react-dom';
 import "./style.css"
 import { CLOSE } from "../../assets/images";
+import { Image } from "../Image";
 
 class Modal extends React.Component{
 
@@ -39,13 +40,15 @@ class Modal extends React.Component{
         return(
             <div className="modal close" onClick={(e) => this.close_modal(e.target)}>
                 <div className="modal-content">
-                    <img
+                    <Image
+                        alt="omers-visit-place"
                         src={img_url}
-                        alt="omers-vişit-place"
+                        width="300"
+                        height="300"
                     />
                 </div>
                 <div className="close-button close">
-                    <img
+                    <Image
                         src={CLOSE}
                         alt="close"
                         className="close"
