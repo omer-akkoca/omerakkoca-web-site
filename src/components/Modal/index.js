@@ -38,8 +38,11 @@ class Modal extends React.Component{
     renderModal = () => {
         const { image: img_url } = this.state
         return(
-            <div className="modal close" onClick={(e) => this.close_modal(e.target)}>
-                <div className="modal-content">
+            <div className="modal" onClick={(e) => this.hide()}>
+                <div
+                    className="modal-content"
+                    onClick={(e) => e.stopPropagation()} //! stop bubbling
+                >
                     <Image
                         alt="omers-visit-place"
                         src={img_url}
@@ -47,11 +50,10 @@ class Modal extends React.Component{
                         height="300"
                     />
                 </div>
-                <div className="close-button close">
+                <div className="close-button">
                     <Image
                         src={CLOSE}
                         alt="close"
-                        className="close"
                     />
                 </div>
             </div>
