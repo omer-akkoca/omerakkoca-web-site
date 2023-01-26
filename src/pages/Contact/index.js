@@ -60,18 +60,20 @@ class Contact extends React.Component{
                                 </table>
                             </div>
                             <div className="social-media">
-                                {
-                                    social_media.map((e,i) => (
-                                        <a key={i.toString()} href={e.url} target="_blank" rel="noreferrer">
-                                            <Image
-                                                src={e.img}
-                                                alt="social"
-                                                width="25"
-                                                height="25"
-                                            />
-                                        </a>
-                                    ))
-                                }
+                                <div className="media-wrapper">
+                                    {
+                                        social_media.map((e,i) => (
+                                            <a key={i.toString()} href={e.url} target="_blank" rel="noreferrer">
+                                                <Image
+                                                    src={e.img}
+                                                    alt="social"
+                                                    width="25"
+                                                    height="25"
+                                                />
+                                            </a>
+                                        ))
+                                    }
+                                </div>
                             </div>
                         </div>
                     </Container>

@@ -45,7 +45,7 @@
 }
 
 .biography-wrapper{
-    background: linear-gradient(180deg,#fff,rgba(193,218,249,.8));
+    background: linear-gradient(180deg,#fff,rgba(48,167,210,0.25));
 }
 
 .biography{
@@ -99,7 +99,7 @@
         height: 50px;
     }
     .biography-wrapper{
-        background: linear-gradient(90deg,#fff,rgba(193,218,249,.8));
+        background: linear-gradient(90deg,#fff,rgba(48,167,210,0.25));
     }
     .biography{
         flex-direction: row;
@@ -119,8 +119,8 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .language-card img{
-        width: 64px;
-        height: 64px;
+        width: 50px;
+        height: 50px;
     }
     .biography img{
         width: 450px;

@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-#contact .content-wrapper .contact-content div{
+#contact .content-wrapper .contact-content .infos, .social-media{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +44,15 @@
 
 .social-media{
     padding: 25px 0;
+    width: 100%;
+}
+
+.social-media .media-wrapper{
+    width: 90%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .social-media a{
@@ -75,8 +84,13 @@
         font-size: 14px;
     }
     .social-media{
-        padding: 0;
-    }    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .social-media a{
+        margin-right: 0
+    }
 }
 
 @media screen and (min-width: 1500px) {
