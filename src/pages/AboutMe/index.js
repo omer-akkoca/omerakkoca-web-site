@@ -5,6 +5,7 @@ import { Navbar } from "../../layouts";
 import { ABOUT_ME_HEADER } from "../../assets/images";
 import { FirebaseClient } from "../../requests";
 import moment from "moment/moment";
+import { FiChevronsRight } from "react-icons/fi"
 
 const xd = "Welcome to my web site. Here is like my personal information page. You can see where did i work, what software language i know, my personal profile live etc. I hope you can find what you are looking for."
 
@@ -12,12 +13,14 @@ class AboutMe extends React.Component{
 
     state = {
         software_languages: [],
+        work_history: [],
         old: 0
     }
 
     async componentDidMount(){
-        const { data } = await FirebaseClient.getFirestore({ collection_name: "language" })
-        this.setState({ software_languages: data })
+        const { data: data1 } = await FirebaseClient.getFirestore({ collection_name: "language" })
+        const { data: data2 } = await FirebaseClient.getFirestore({ collection_name: "jobs-history" })
+        this.setState({ software_languages: data1, work_history: data2 })
 
         var a = moment(Date.now())
         var b = moment([2000, 4, 17])
@@ -26,7 +29,7 @@ class AboutMe extends React.Component{
     }
 
     render(){
-        const { software_languages, old } = this.state
+        const { software_languages, old, work_history } = this.state
         return (
             <section id="about-me">
                 <Navbar />
@@ -49,6 +52,35 @@ class AboutMe extends React.Component{
                                         Üniversiteye başladığımdan beri ve lise hayatımda hep web üzerine ilerlemek istemiştim.
                                         Şuanda da bu kişisel sitem ile de karşınızdayım.
                                     </p>
+                                </div>
+                            </Container>
+                        </div>
+
+                        <div className="element">
+                            <Container>
+                                <h1>work history</h1>
+                                <div className="work-list">
+                                    {
+                                        work_history.map((work,i) =>(
+                                            <div key={work.id} className="work-card">
+                                                <div className="logo">
+                                                    <Image
+                                                        src={work.logo}
+                                                        alt={work.name}
+                                                        width="45"
+                                                        height="45"
+                                                    />
+                                                    {
+                                                        i === work_history.length-1
+                                                        ?   null
+                                                        :   <div className="line">
+                                                                <FiChevronsRight/>
+                                                            </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                             </Container>
                         </div>

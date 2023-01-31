@@ -32,13 +32,13 @@
 }
 
 .language-card img{
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     margin-bottom: 12px;
 }
 
 .language-card h3{
-    font-size: 18px;
+    font-size: 14px;
     text-transform: capitalize;
     font-family: "Nunito-Bold";
     color: var(--dark_text);
@@ -80,13 +80,66 @@
     text-shadow: 2px 2px var(--dark_text);
 }
 
+.work-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.work-card:last-of-type{
+    margin-right: 0;
+}
+
+.work-list .logo{
+    position: relative;
+}
+
+.work-list .logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 0.25px solid rgba(0, 0, 0, 0.25);
+    box-shadow: px 2px 10px var(--transparent_dark);
+}
+
+.work-card .line{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100px;
+    width: 100px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-card .line > *{
+    position: absolute;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 1);
+}
+
 @media screen and (min-width: 475px) {
     .element .language-card-container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     .language-card img{
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
+    }
+    .work-list .logo img{
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -112,6 +165,10 @@
     .biography p{
         font-size: 18px;
     }
+    .work-list .logo img{
+        width: 75px;
+        height: 75px;
+    }
 }
 
 @media screen and (min-width: 1500px) {
@@ -128,5 +185,9 @@
     }
     .biography p{
         font-size: 20px;
+    }
+    .work-list .logo img{
+        width: 85px;
+        height: 85px;
     }
 }
