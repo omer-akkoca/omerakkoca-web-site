@@ -5,7 +5,7 @@ import { Navbar } from "../../layouts";
 import { ABOUT_ME_HEADER } from "../../assets/images";
 import { FirebaseClient } from "../../requests";
 import moment from "moment/moment";
-import { FiChevronsRight } from "react-icons/fi"
+import WorkHistoryCard from "./WorkHistoryCard";
 
 const xd = "Welcome to my web site. Here is like my personal information page. You can see where did i work, what software language i know, my personal profile live etc. I hope you can find what you are looking for."
 
@@ -61,24 +61,13 @@ class AboutMe extends React.Component{
                                 <h1>work history</h1>
                                 <div className="work-list">
                                     {
-                                        work_history.map((work,i) =>(
-                                            <div key={work.id} className="work-card">
-                                                <div className="logo">
-                                                    <Image
-                                                        src={work.logo}
-                                                        alt={work.name}
-                                                        width="45"
-                                                        height="45"
-                                                    />
-                                                    {
-                                                        i === work_history.length-1
-                                                        ?   null
-                                                        :   <div className="line">
-                                                                <FiChevronsRight/>
-                                                            </div>
-                                                    }
-                                                </div>
-                                            </div>
+                                        work_history.map((work, i) => (
+                                            <WorkHistoryCard
+                                                key={work.id}
+                                                data={work}
+                                                last={i !== work_history.length - 1}
+                                                top={i%2===0}
+                                            />
                                         ))
                                     }
                                 </div>
