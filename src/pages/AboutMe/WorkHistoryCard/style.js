@@ -27,6 +27,7 @@ export const Image = styled.img`
     border-radius: 100%;
     object-fit: cover;
     overflow: hidden;
+    z-index: 5;
 `
 
 export const Lines = styled.div`
@@ -48,7 +49,7 @@ export const TopLineDiv = styled.span`
             top: ${`${-1*(top_circle+top_line_height-2)}px`};
         `
         : css`
-            bottom: ${`${-1*(top_circle+top_line_height-2)}px`};
+            bottom: ${`${-1*(top_circle+top_line_height-3)}px`};
         `
     };
     left: 50%;
@@ -57,6 +58,7 @@ export const TopLineDiv = styled.span`
     justify-content: center;
     align-items: center;
     flex-direction: ${({top}) => top ? "column" : "column-reverse"};
+    z-index: -1;
 `
 
 export const TopVerticalLine = styled.span`

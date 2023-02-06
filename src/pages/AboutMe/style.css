@@ -13,15 +13,23 @@
 }
 
 .element .language-card-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 25px;
+    display: flex;
+    overflow-x: auto;
 }
 
 .language-card-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 25px;
+}
+
+.language-card-wrapper:last-of-type{
+    margin-right: 25px;
+}
+
+.language-card-wrapper:first-of-type{
+    margin-left: 25px;
 }
 
 .language-card{
@@ -95,6 +103,16 @@
     .language-card img{
         width: 40px;
         height: 40px;
+    }
+    .language-card-wrapper{
+        margin-right: 75px;
+    }    
+}
+
+@media screen and (min-width: 800px) {
+    .element h1{
+        font-size: 2em;
+        margin-bottom: 50px;
     }
 }
 
