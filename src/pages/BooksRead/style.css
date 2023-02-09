@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 25px;
+    grid-row-gap: 50px;
 }
 
 .books-card-wrapper{
@@ -93,21 +94,22 @@
 }
 
 .book-card .back-face h1{
-    font-size: 20px;
+    font-size: 18px !important;
     letter-spacing: 1px;
-    font-family: monospace;
+    font-family: "Nunito-Black";
 }
 
 .book-card .back-face h2{
     position: relative;
-    font-size: 18px;
+    font-size: 15px !important;
     font-weight: 400;
     letter-spacing: 3px;
+    font-family: "Nunito-Regular";
 }
 
 .book-card .back-face .line{
     width: 100%;
-    height: 1.5px;
+    height: 1px;
     border-radius: 99px;
     background-color: white;
 }
@@ -115,11 +117,13 @@
 .book-card .back-face h3{
     font-size: 14px;
     font-weight: 500;
+    font-family: "Nunito-Regular";
 }
 
 .book-card .back-face p{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
+    font-family: "Nunito-Medium";
 }
 
 @media screen and (max-width: 325px) {
@@ -149,14 +153,11 @@
         --card-width: 213.88px;
         --card-height: 333.33px;
     }    
-    .books-content{
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media screen and (min-width: 800px) {
     .books-content{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -168,17 +169,14 @@
     .book-card .back-face h1, h2, .line, h3{
         margin-bottom: 12px;
     }
-    .book-card .back-face h1{
-        font-size: 24px;
-    }
-    .book-card .back-face h2{
-        font-size: 20px;
-    }
-    .book-card .back-face h3{
-        font-size: 16px;
-    }
     .book-card .back-face p{
         font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .books-content{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

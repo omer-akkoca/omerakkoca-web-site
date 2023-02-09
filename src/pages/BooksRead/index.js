@@ -17,7 +17,6 @@ class BooksRead extends React.Component{
     async componentDidMount(){
         const { data } =  await FirebaseClient.getFirestore({ collection_name: "books-read" })
         this.setState({ books: data })
-        console.log(data)
     }
 
     render(){
