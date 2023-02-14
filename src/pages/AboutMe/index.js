@@ -5,10 +5,9 @@ import { Navbar } from "../../layouts";
 import { ABOUT_ME_HEADER } from "../../assets/images";
 import { FirebaseClient } from "../../requests";
 import moment from "moment/moment";
-import WorkHistoryCard from "./WorkHistoryCard";
+import WorkCard from "./subComponents/work-card";
 
 const xd = "Welcome to my web site. Here is like my personal information page. You can see where did i work, what software language i know, my personal profile live etc. I hope you can find what you are looking for."
-
 class AboutMe extends React.Component{
 
     state = {
@@ -58,16 +57,11 @@ class AboutMe extends React.Component{
 
                         <div className="element">
                             <Container>
-                                <h1>work history</h1>
+                                <h1 className="element-title">work history</h1>
                                 <div className="work-list">
                                     {
                                         work_history.map((work, i) => (
-                                            <WorkHistoryCard
-                                                key={work.id}
-                                                data={work}
-                                                last={i !== work_history.length - 1}
-                                                top={i%2===0}
-                                            />
+                                            <WorkCard key={work.id} work={work}/>
                                         ))
                                     }
                                 </div>
@@ -76,7 +70,7 @@ class AboutMe extends React.Component{
                         
                         <div className="element">
                             <Container>
-                                <h1>software languages i know</h1>
+                                <h1 className="element-title">software languages i know</h1>
                                 <div className="language-card-container">
                                     {
                                         software_languages.map(e => (

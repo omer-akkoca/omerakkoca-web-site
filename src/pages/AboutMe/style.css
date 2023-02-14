@@ -2,7 +2,7 @@
     margin-bottom: 50px;
 }
 
-.element h1{
+.element h1.element-title{
     text-align: center;
     color: var(--dark_text);
     font-family: "Nunito-Black";
@@ -89,12 +89,10 @@
 }
 
 .work-list{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
 }
-
 
 @media screen and (min-width: 475px) {
     .element .language-card-container{
@@ -110,9 +108,12 @@
 }
 
 @media screen and (min-width: 800px) {
-    .element h1{
+    .element h1.element-title{
         font-size: 2em;
         margin-bottom: 50px;
+    }
+    .work-list{
+        grid-template-columns: 1fr 1fr;   
     }
 }
 
@@ -154,5 +155,8 @@
     }
     .biography p{
         font-size: 20px;
+    }
+    .work-list{
+        grid-template-columns: 1fr 1fr 1fr;   
     }
 }
