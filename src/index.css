@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --dark_text: #0d172a;
   --transparent_dark: rgba(13, 23, 42, .8);
