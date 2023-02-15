@@ -17,10 +17,14 @@ export const ImageWrapper = styled.div`
 `
 
 export const Image = styled.img`
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     object-fit: cover;
     border-radius: 100%;
+    @media (min-width: 475px) {
+        height: 60px;
+        width: 60px;
+    }
 ` 
 
 export const DescWrapper = styled.div`
@@ -30,23 +34,32 @@ export const DescWrapper = styled.div`
 `
 
 export const Title = styled.h1`
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-family: "Nunito-Black";
     color: ${({color}) => color ? color : "red"};
     text-transform: capitalize;
     padding: 0 0 2.5% 0;
+    @media (min-width: 475px) {
+        font-size: 1.5em;
+    }
 `
 
 export const Description = styled.p`
-    font-size: 16px;
+    font-size: 15px;
     color: var(--dark_text);
     font-family: "Nunito-Medium";
     padding: 0 0 2.5% 0;
+    @media (min-width: 475px) {
+        font-size: 16px;
+    }
 `
 
 export const Time = styled.p`
-    font-size: 14px;
+    font-size: 12px;
     color: var(--transparent_dark);
     font-family: "Nunito-Regular";
     text-align: right;
+    @media (min-width: 475px) {
+        font-size: 14px;
+    }
 `

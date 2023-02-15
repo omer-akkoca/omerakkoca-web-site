@@ -15,7 +15,10 @@ const WorkCard = ({ work }) => {
             <DescWrapper>
                 <Title color={work.color}>{work.title}</Title>
                 <Description>{work.desc}</Description>
-                <Time>{moment(work.started_at.seconds).format('MMMM d, YYYY')}</Time>
+                <Time>
+                    {moment(work.started_at).format('d MMMM YYYY')} - {" "}
+                    {work.finished_at ? moment(work.finished_at).format('d MMMM YYYY') : "Continues"}
+                </Time>
             </DescWrapper>
         </CardWrapper>
     )
