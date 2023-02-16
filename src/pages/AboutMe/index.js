@@ -57,7 +57,7 @@ class AboutMe extends React.Component{
 
                         <div className="element">
                             <Container>
-                                <h1 className="element-title">work history</h1>
+                                <h1 className="element-title">school & work history</h1>
                                 <div className="work-list">
                                     {
                                         work_history.map((work, i) => (

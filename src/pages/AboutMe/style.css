@@ -3,7 +3,7 @@
 }
 
 .element h1.element-title{
-    text-align: center;
+    text-align: left;
     color: var(--dark_text);
     font-family: "Nunito-Black";
     font-size: 1.5em;
@@ -21,15 +21,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 25px;
+    margin-right: 35px;
 }
 
 .language-card-wrapper:last-of-type{
-    margin-right: 25px;
-}
-
-.language-card-wrapper:first-of-type{
-    margin-left: 25px;
+    margin-right: 0;
 }
 
 .language-card{
@@ -50,6 +46,7 @@
     text-transform: capitalize;
     font-family: "Nunito-Bold";
     color: var(--dark_text);
+    text-align: center;
 }
 
 .biography-wrapper{

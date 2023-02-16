@@ -6,7 +6,8 @@ export const CardWrapper = styled.div`
     box-shadow: 1px 1px 9px -5px var(--transparent_dark);
     padding: 4%;
     background-color: white;
-    border-radius: 2%;
+    border-radius: 10px;
+    overflow: hidden;
 `
 
 export const ImageWrapper = styled.div`
@@ -59,6 +60,10 @@ export const Time = styled.p`
     color: var(--transparent_dark);
     font-family: "Nunito-Regular";
     text-align: right;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     @media (min-width: 475px) {
         font-size: 14px;
     }

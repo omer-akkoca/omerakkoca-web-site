@@ -3,15 +3,8 @@
 }
 
 .inner{
-    width: 95%;
+    width: 90%;
     margin: auto;
-}
-
-
-@media screen and (min-width: 475px) {
-    .inner{
-        width: 90%;
-    }
 }
 
 @media screen and (min-width: 800px) {
