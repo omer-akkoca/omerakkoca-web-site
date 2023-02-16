@@ -109,6 +109,9 @@
         font-size: 2em;
         margin-bottom: 50px;
     }
+}
+
+@media screen and (min-width: 1000px) {
     .work-list{
         grid-template-columns: 1fr 1fr;   
     }

@@ -41,16 +41,22 @@ export const Title = styled.h1`
     text-transform: capitalize;
     padding: 0 0 2.5% 0;
     @media (min-width: 475px) {
+        font-size: 1.3em;
+    }
+    @media (min-width: 800px) {
         font-size: 1.5em;
     }
 `
 
 export const Description = styled.p`
-    font-size: 15px;
+    font-size: 14px;
     color: var(--dark_text);
     font-family: "Nunito-Medium";
     padding: 0 0 2.5% 0;
     @media (min-width: 475px) {
+        font-size: 15px;
+    }
+    @media (min-width: 800px) {
         font-size: 16px;
     }
 `
