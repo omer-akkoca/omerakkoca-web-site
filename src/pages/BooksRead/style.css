@@ -30,6 +30,7 @@
     cursor: pointer;
     box-shadow: 0 3px 8px var(--transparent_dark);
     z-index: 1;
+    user-select: none;
 }
 
 .book-card:hover{

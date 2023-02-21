@@ -58,6 +58,21 @@ section{
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark_text); 
+}
+
 @media screen and (min-width: 800px) {
   section{
     padding-top: var(--navbar_height);
