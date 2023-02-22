@@ -70,18 +70,19 @@
 }
 
 .biography p{
-    font-size: 16px;
+    font-size: 14px !important;
     line-height: 1.5em;
     letter-spacing: 0.5px;
     font-family: monospace;
     font-weight: bold;
     color: var(--dark_text);
+    font-family: "Nunito-Medium" !important;
 }
 
 .biography p::first-letter{
     color: rgba(17,151,209);
     font-weight: bolder;
-    font-size: 5em;
+    font-size: 4em;
     text-shadow: 2px 2px var(--dark_text);
 }
 
@@ -152,9 +153,6 @@
     .biography img{
         width: 450px;
         margin-bottom: 0;
-    }
-    .biography p{
-        font-size: 20px;
     }
     .work-list{
         grid-template-columns: 1fr 1fr 1fr;   

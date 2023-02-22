@@ -6,6 +6,11 @@ import { ABOUT_ME_HEADER } from "../../assets/images";
 import { FirebaseClient } from "../../requests";
 import moment from "moment/moment";
 import WorkCard from "./subComponents/work-card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 const xd = "Welcome to my web site. Here is like my personal information page. You can see where did i work, what software language i know, my personal profile live etc. I hope you can find what you are looking for."
 class AboutMe extends React.Component{
@@ -71,7 +76,44 @@ class AboutMe extends React.Component{
                         <div className="element">
                             <Container>
                                 <h1 className="element-title">software languages i know</h1>
-                                <div className="language-card-container">
+                                <Swiper
+                                    slidesPerView={"auto"}
+                                    spaceBetween={50}
+                                    pagination={{ clickable: true }}
+                                    className="mySwiper"
+                                    freeMode={true}
+                                    modules={[FreeMode]}
+                                >
+                                    {
+                                        software_languages.map(e => (
+                                            <SwiperSlide key={e.id} style={{ width: "auto", height: "auto" }}>
+                                                <div className="language-card-wrapper">
+                                                    <div className="language-card">
+                                                        <Image
+                                                            src={e.src}
+                                                            alt={e.name}
+                                                            width="25"
+                                                            height="25"
+                                                        />
+                                                        <h3>{e.name}</h3>
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))
+                                    }
+                                </Swiper>
+                            </Container>
+                        </div>
+                    </div>
+                </div>
+                <Footer/>
+            </section>
+        )
+    }
+}
+
+/*
+<div className="language-card-container">
                                     {
                                         software_languages.map(e => (
                                             <div key={e.id} className="language-card-wrapper">
@@ -88,14 +130,6 @@ class AboutMe extends React.Component{
                                         ))
                                     }
                                 </div>
-                            </Container>
-                        </div>
-                    </div>
-                </div>
-                <Footer/>
-            </section>
-        )
-    }
-}
+*/
 
 export { AboutMe }

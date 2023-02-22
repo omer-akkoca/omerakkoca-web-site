@@ -92,6 +92,7 @@
     font-family: "Nunito-Black";
     letter-spacing: 1px;
     margin-bottom: 8px;
+    padding: 0 25px;
 }
 
 .visited-card .desc-content .time{
@@ -105,7 +106,7 @@
 }
 
 .visited-card .desc-content p{
-    font-size: 16px;
+    font-size: 15px;
     font-family: "Nunito-Regular";
     line-height: normal;
 }
