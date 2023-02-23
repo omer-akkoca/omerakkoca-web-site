@@ -68,6 +68,10 @@ nav{
     cursor: pointer;
 }
 
+.navbar-inner ul li a.active{
+    background-color: var(--dark_text);
+}
+
 .navbar-inner ul li:not(.drop-down):hover{
     background-color: white;
 }    
@@ -100,8 +104,8 @@ nav{
         --navbar_height: 50px;
     }
     .navbar-inner ul li .icon{
-        width: calc(var(--navbar_height) / 2);
-        height: calc(var(--navbar_height) / 2);
+        width: calc(var(--navbar_height) / 2.1);
+        height: calc(var(--navbar_height) / 2.1);
     }
 }
 
@@ -175,6 +179,9 @@ nav{
     }
     .navbar-inner ul li h1{
         display: block;
+    }
+    .navbar-inner ul li a.active{
+        background-color: inherit;
     }
     .navbar-inner ul li .icon{
         display: none;

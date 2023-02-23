@@ -7,7 +7,7 @@ import { FirebaseClient } from "../../requests";
 import moment from "moment/moment";
 import WorkCard from "./subComponents/work-card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";

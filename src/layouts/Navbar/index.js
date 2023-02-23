@@ -2,11 +2,14 @@ import React, { useRef } from "react";
 import "./style.css"
 import { Container, Image } from "../../components"
 import { Link } from "react-router-dom";
-import { ABOUT_ME, BOOKS_READ, CONTACT, HOME, PLACES_VISITED } from "../../assets/images"
+import { ABOUT_ME_DARK, ABOUT_ME_WHITE, BOOKS_READ_DARK, BOOKS_READ_WHITE, CONTACT_DARK, CONTACT_WHITE, HOME_DARK, HOME_WHITE, PLACES_VISITED_DARK, PLACES_VISITED_WHITE } from "../../assets/images"
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
 
     const navbar = useRef()
+
+    const { pathname } = useLocation()
 
     window.addEventListener("scroll",(e) => {
         if (window.scrollY > 50) {
@@ -15,6 +18,11 @@ const Navbar = () => {
             navbar.current?.classList.remove("scrolled-nav")
         }
     })
+
+    const currentPath = (x) => {
+        const isActive = x === pathname ? "active" : ""
+        return isActive;
+    }
 
     return (
         <nav ref={navbar}>
@@ -27,18 +35,18 @@ const Navbar = () => {
                     </div>
                     <ul>
                         <li>
-                            <Link to={"/"}>
+                            <Link to={"/"} className={currentPath("/")}>
                                 <h1>Home</h1>
                                 <div className="icon">
-                                    <Image src={HOME} alt="home" />
+                                    <Image src={currentPath("/") === "active" ? HOME_WHITE : HOME_DARK} alt="home" />
                                 </div>
                             </Link>
                         </li>
                         <li>
-                            <Link to={"/about-me"}>
+                            <Link to={"/about-me"} className={currentPath("/about-me")}>
                                 <h1>About Me</h1>
                                 <div className="icon">
-                                    <Image src={ABOUT_ME} alt="home" />
+                                    <Image src={currentPath("/about-me") === "active" ? ABOUT_ME_WHITE : ABOUT_ME_DARK} alt="home" />
                                 </div>
                             </Link>
                         </li>
@@ -46,28 +54,28 @@ const Navbar = () => {
                             <h1>My Interest</h1>
                             <ul>
                                 <li>
-                                    <Link to={"/places-visited"}>
+                                    <Link to={"/places-visited"} className={currentPath("/places-visited")}>
                                         <h1>Places Visited</h1>
                                         <div className="icon">
-                                            <Image src={PLACES_VISITED} alt="home" />
+                                            <Image src={currentPath("/places-visited") === "active" ? PLACES_VISITED_WHITE : PLACES_VISITED_DARK} alt="home" />
                                         </div>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to={"/books-read"}>
+                                    <Link to={"/books-read"} className={currentPath("/books-read")}>
                                         <h1>Books Read</h1>
                                         <div className="icon">
-                                            <Image src={BOOKS_READ} alt="home" />
+                                            <Image src={currentPath("/books-read") === "active" ? BOOKS_READ_WHITE : BOOKS_READ_DARK} alt="home" />
                                         </div>
                                     </Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <Link to={"/contact"}>
+                            <Link to={"/contact"} className={currentPath("/contact")}>
                                 <h1>Contact</h1>
-                                <div className="icon">
-                                    <Image src={CONTACT} alt="home" />
+                                <div className={`icon ${currentPath("/contact")}`}>
+                                    <Image src={currentPath("/contact") === "active" ? CONTACT_WHITE : CONTACT_DARK} alt="home" />
                                 </div>
                             </Link>
                         </li>
