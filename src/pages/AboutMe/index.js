@@ -112,24 +112,4 @@ class AboutMe extends React.Component{
     }
 }
 
-/*
-<div className="language-card-container">
-                                    {
-                                        software_languages.map(e => (
-                                            <div key={e.id} className="language-card-wrapper">
-                                                <div className="language-card">
-                                                    <Image
-                                                        src={e.src}
-                                                        alt={e.name}
-                                                        width="25"
-                                                        height="25"
-                                                    />
-                                                    <h3>{e.name}</h3>
-                                                </div>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-*/
-
 export { AboutMe }
