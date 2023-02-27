@@ -1,7 +1,6 @@
 import React from "react";
 import { CardWrapper, Description, DescWrapper, Image, ImageWrapper, Time, Title } from "./style";
 import 'moment/locale/tr';
-import moment from "moment";
 
 const WorkCard = ({ work }) => {
     return(
@@ -16,8 +15,8 @@ const WorkCard = ({ work }) => {
                 <Title color={work.color}>{work.title}</Title>
                 <Description>{work.desc}</Description>
                 <Time>
-                    {moment(work.started_at).format('d MMMM YYYY')} - {" "}
-                    {work.finished_at ? moment(work.finished_at).format('d MMMM YYYY') : "Continues"}
+                    {work.started_at} - {" "}
+                    {work.finished_at ? work.finished_at : "Continues"}
                 </Time>
             </DescWrapper>
         </CardWrapper>
