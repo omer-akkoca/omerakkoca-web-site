@@ -10,9 +10,9 @@ const Footer = () => {
                 <div className="content">
                     <h1>Created and designed by Omer Akkoca at 2021</h1>
                     <ul>
-                        <li><Link to="/"><h1>Home</h1></Link></li>
-                        <li><Link to="/about-me"><h1>About Me</h1></Link></li>
-                        <li><Link to="/contact"><h1>Contact</h1></Link></li>
+                        <li><Link to="/"><h1>Anasayfa</h1></Link></li>
+                        <li><Link to="/about-me"><h1>Hakkımda</h1></Link></li>
+                        <li><Link to="/contact"><h1>İletişim</h1></Link></li>
                     </ul>
                 </div>
             </Container>

@@ -36,7 +36,7 @@ const Navbar = () => {
                     <ul>
                         <li>
                             <Link to={"/"} className={currentPath("/")}>
-                                <h1>Home</h1>
+                                <h1>Anasayfa</h1>
                                 <div className="icon">
                                     <Image src={currentPath("/") === "active" ? HOME_WHITE : HOME_DARK} alt="home" />
                                 </div>
@@ -44,18 +44,18 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link to={"/about-me"} className={currentPath("/about-me")}>
-                                <h1>About Me</h1>
+                                <h1>Hakkımda</h1>
                                 <div className="icon">
                                     <Image src={currentPath("/about-me") === "active" ? ABOUT_ME_WHITE : ABOUT_ME_DARK} alt="home" />
                                 </div>
                             </Link>
                         </li>
                         <li className="drop-down">
-                            <h1>My Interest</h1>
+                            <h1>Hobiler</h1>
                             <ul>
                                 <li>
                                     <Link to={"/places-visited"} className={currentPath("/places-visited")}>
-                                        <h1>Places Visited</h1>
+                                        <h1>Seyehat Yerleri</h1>
                                         <div className="icon">
                                             <Image src={currentPath("/places-visited") === "active" ? PLACES_VISITED_WHITE : PLACES_VISITED_DARK} alt="home" />
                                         </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
                                 </li>
                                 <li>
                                     <Link to={"/books-read"} className={currentPath("/books-read")}>
-                                        <h1>Books Read</h1>
+                                        <h1>Okunan Kitaplar</h1>
                                         <div className="icon">
                                             <Image src={currentPath("/books-read") === "active" ? BOOKS_READ_WHITE : BOOKS_READ_DARK} alt="home" />
                                         </div>
@@ -73,7 +73,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link to={"/contact"} className={currentPath("/contact")}>
-                                <h1>Contact</h1>
+                                <h1>İletişim</h1>
                                 <div className={`icon ${currentPath("/contact")}`}>
                                     <Image src={currentPath("/contact") === "active" ? CONTACT_WHITE : CONTACT_DARK} alt="home" />
                                 </div>

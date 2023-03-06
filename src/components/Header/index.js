@@ -22,7 +22,7 @@ const Header = ({ title, image, text }) => {
                 <div className="content">
                     <p>{text}</p>
                     <button className="custom-button" onClick={handleOnClick}>
-                        Click For More
+                        Detaylar için tıklayınız...
                     </button>
                 </div>
             </header>

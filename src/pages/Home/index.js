@@ -11,7 +11,7 @@ class Home extends React.Component{
     }
 
     async componentDidMount(){
-        const { data, error } = await FirebaseClient.getDocument({ collection_name: "about-me", document_name: "cv" })
+        const { data } = await FirebaseClient.getDocument({ collection_name: "about-me", document_name: "cv" })
         if (data) {
             this.setState({ cv_url: data.url })
         }
@@ -38,7 +38,7 @@ class Home extends React.Component{
                                 <h2>Front-End Developer</h2>
                                 <div className="button-wrapper">
                                     <a href={this.state.cv_url} download="omer-akkoca-cv" target="_blank" rel="noreferrer">
-                                        <button className="download-cv">Downlaod CV</button>
+                                        <button className="download-cv">CV İndir</button>
                                     </a>
                                 </div>
                             </div>

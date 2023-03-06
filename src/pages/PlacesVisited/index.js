@@ -6,7 +6,7 @@ import { PLACES_VISITED_HEADER } from "../../assets/images";
 import { VisitedCard } from "./visitedCard";
 import { FirebaseClient } from "../../requests";
 
-const xd = "Çalışmanın önemli olduğu kadar dünyayı gezip yeni insanlarla tanışmakta bir o kadar önemlidir. Hadi sizinle nereleri seyahet ettiğime bakalım."
+const xd = "İş hayatın ve insanın bilgi birikiminin önemli olduğu kadar bence yeni yerler görmek ve keşfetmekte bir o kadar öenmli. Yeni kültür ve insanlarla iç içe olup yeni deneyimler kazanmak bu hayatta alabileceğimiz en büyük derstir."
 
 class PlacesVisited extends React.Component{
 

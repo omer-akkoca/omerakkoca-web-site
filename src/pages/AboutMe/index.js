@@ -12,7 +12,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-const xd = "Welcome to my web site. Here is like my personal information page. You can see where did i work, what software language i know, my personal profile live etc. I hope you can find what you are looking for."
+const xd = `
+Web sayfama hoşgeldiniz. Burada aslında benim hakkımda ayak üstü edinebileceğiniz birkaç bilgi var. Umarım benim hakkımda aradığını burada bulursun ve yeterli olur.
+Olurda daha fazlasını öğrenmek iterseniz İletişim sayfasından bana ulaşabilirsiniz. Her insan farklı bir gizem doludur sonuçta.
+`
 class AboutMe extends React.Component{
 
     state = {
@@ -50,11 +53,17 @@ class AboutMe extends React.Component{
                                         height="250"
                                     />
                                     <p>
-                                        Hello. My name is Omer AKKOCA. I was born in 17 of April in 2000.
-                                        Now i am {old} years old. You will see at below what i have done in my {old} years of life.
-                                        It is only important thing for you is what i have done before. Yes i am a software engineer and i am so happy with it.
-                                        Üniversiteye başladığımdan beri ve lise hayatımda hep web üzerine ilerlemek istemiştim.
-                                        Şuanda da bu kişisel sitem ile de karşınızdayım.
+                                        Merhaba. Benim adım Ömer Akkoca ve {old} yaşındayım. Yazılım hayatıma lise 2'de Madenler Mesleki ve Teknik
+                                        Anadolu Lisesi'nde c# öğrenerek başladım. Burada c# ile hem yazılım işine girmiş oldum hemde lise 3'te
+                                        web tasarım alanı ile aslında şuanki işim olan alana ilk adımımı atmış oldum. Daha sonrasında üniversite seçimlerimde
+                                        matemetik veya bilgisayar mühendisliği okumaya karar verdim. Bu kararım sonucunda da ilk seçimim olan Karadeniz Teknik
+                                        Üniveristesi Yazılım Mühendisliği bölümüne yerleştim. Burada yine c++ ve java ile yazılıma 2. adımımı atmış oldum.
+                                        Pandeminin başlarında ise liseden kalma bilgilerimle şuanki gördüğünüz siteyi yapmak istedim ama bilgilerimin çok yetersiz
+                                        olduğunun farkına vardım. Bu sayede şuanki işim olan Front-end Developer'lığa ilk adımı atmış oldum. Önce web siteleri
+                                        yapmaya sonrasında ise web bilgilerimi kullanabileceğim ikinci bir alan olan mobil programlamaya merak sardım ve react-native
+                                        ile mobil programlama yapmaya başladım. Şuan ise hem mobil hemde web olmak üzere iki alandada front-end developer olarak
+                                        çalışıyorum. Lise hayatımdan gelen hevesim ile giriştiğim, üniversite ile daha da sağlamlaştırdığım ve kendi çalışmam sayesinde
+                                        ileri taşıdığım bu hevesim artık benim işim ve ben bu işi çok seviyorum. İnsan adım adım büyütüp, geliştirdiği neyi sevmez ki 😀.
                                     </p>
                                 </div>
                             </Container>
@@ -62,7 +71,7 @@ class AboutMe extends React.Component{
 
                         <div className="element">
                             <Container>
-                                <h1 className="element-title">school & work history</h1>
+                                <h1 className="element-title">Okul & İş Geçmİşİ</h1>
                                 <div className="work-list">
                                     {
                                         work_history.map((work, i) => (
@@ -75,7 +84,7 @@ class AboutMe extends React.Component{
                         
                         <div className="element">
                             <Container>
-                                <h1 className="element-title">software languages i know</h1>
+                                <h1 className="element-title">Bİldİğİm Yazılım Dİllerİ</h1>
                                 <Swiper
                                     slidesPerView={"auto"}
                                     spaceBetween={50}

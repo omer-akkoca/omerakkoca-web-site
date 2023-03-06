@@ -9,29 +9,28 @@ import { INSTAGRAM, FACEBOOK, TWITTER, GITHUB, LINKEDIN } from "../../assets/ima
 
 const social_media = [
     {
-        url: "",
+        url: "https://www.facebook.com/omer.akkoca.52",
         img: FACEBOOK
     },
     {
-        url: "",
+        url: "https://www.instagram.com/omer_akkoca",
         img: INSTAGRAM
     },
     {
-        url: "",
+        url: "https://twitter.com/merAKKOCA10",
         img: TWITTER
     },
     {
-        url: "",
+        url: "https://github.com/omer-akkoca",
         img: GITHUB
     },
     {
-        url: "",
+        url: "https://www.linkedin.com/in/omerakkoca/",
         img: LINKEDIN
     }
 ]
 
-const xd = "Buraya kadar neler yaptığımı nasıl biri olduğumu biraz olsun anlamışsınızdır.Şimdi eğer kafanızda herhangi bir proje var ise lütfen iletişim kurmayı unutmayınız."
-
+const xd = "Buraya kadar umarım benim hakkımda bilgi sahibi olmuşsunuzdur. Aşağıda iletilim bilgilerim yer almakta. İhtiyacınız var ise ben her zaman o bilgilerin ardında olacağım."
 class Contact extends React.Component{
     render() {
         return (

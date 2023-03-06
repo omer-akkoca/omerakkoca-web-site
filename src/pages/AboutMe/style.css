@@ -71,12 +71,12 @@
 
 .biography p{
     font-size: 14px !important;
-    line-height: 1.5em;
-    letter-spacing: 0.5px;
+    line-height: 1.75em;
+    letter-spacing: 0.75px;
     font-family: monospace;
     font-weight: bold;
     color: var(--dark_text);
-    font-family: "Nunito-Medium" !important;
+    font-family: "Nunito-Regular" !important;
 }
 
 .biography p::first-letter{
