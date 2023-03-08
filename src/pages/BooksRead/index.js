@@ -8,8 +8,7 @@ import BookCard from "./book-card";
 
 const xd = `
 "Biz zevk için harcadığımız paradan fazla, kitap için sarfetmediğimiz müddetçe, bu ülke hiç bir zaman medeni bir ülke olamayacaktır" der Elbert Hubberd. Aslında tamda içinde bulunduğumuz toprakları ve insanımızı bize anlatan bir söz bu.
-Oysaki her kitabın her sayfası bize farklı bir perspektif sunmaz mı. Bir kitabın içinde yaşayan her bir karakterin her birimiz için göstereceği ve öğreteceği, bizlere anlatacağı bir hikaye bulunmaz mı. O halde insan neden
-kolay şekilde elde edebileceği bu sonsuz dünya ve görüşten uzaklaşır ki. Saklanmak için mi, öğrenmemek için mi, yoksa ruhu öldüğü için mi?
+Oysaki her kitabın her sayfası bize farklı bir perspektif sunmaz mı. Bir kitabın içinde yaşayan her bir karakterin her birimiz için göstereceği ve öğreteceği, bizlere anlatacağı bir hikaye bulunmaz mı?
 `
 
 class BooksRead extends React.Component{
