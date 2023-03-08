@@ -59,7 +59,7 @@ class AboutMe extends React.Component{
                                         matemetik veya bilgisayar mühendisliği okumaya karar verdim. Bu kararım sonucunda da ilk seçimim olan Karadeniz Teknik
                                         Üniveristesi Yazılım Mühendisliği bölümüne yerleştim. Burada yine c++ ve java ile yazılıma 2. adımımı atmış oldum.
                                         Pandeminin başlarında ise liseden kalma bilgilerimle şuanki gördüğünüz siteyi yapmak istedim ama bilgilerimin çok yetersiz
-                                        olduğunun farkına vardım. Bu sayede şuanki işim olan Front-end Developer'lığa ilk adımı atmış oldum. Önce web siteleri
+                                        olduğunun farkına vardım. Bu sayede şuanki işim olan Front-end Developer'lığa girişin en sağlam adımlarını atmış oldum. Önce web siteleri
                                         yapmaya sonrasında ise web bilgilerimi kullanabileceğim ikinci bir alan olan mobil programlamaya merak sardım ve react-native
                                         ile mobil programlama yapmaya başladım. Şuan ise hem mobil hemde web olmak üzere iki alandada front-end developer olarak
                                         çalışıyorum. Lise hayatımdan gelen hevesim ile giriştiğim, üniversite ile daha da sağlamlaştırdığım ve kendi çalışmam sayesinde

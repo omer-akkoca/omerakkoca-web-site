@@ -16,7 +16,7 @@ const WorkCard = ({ work }) => {
                 <Description>{work.desc}</Description>
                 <Time>
                     {work.started_at} - {" "}
-                    {work.finished_at ? work.finished_at : "Continues"}
+                    {work.finished_at ? work.finished_at : "Devam ediyor"}
                 </Time>
             </DescWrapper>
         </CardWrapper>
