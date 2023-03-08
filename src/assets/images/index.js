@@ -23,8 +23,10 @@ import LINKEDIN from "./social-media/linkedin.png"
 import DETAILS from "./details.png"
 import FULL_SCREEN from "./full-screen.png"
 import CANCEL from "./cancel.png"
-
 import CLOSE from "./close.png"
+
+import HOME_PROFILE from "./home-profile.jpeg"
+import ABOUT_ME_PROFILE from "./about-me-profile.jpeg"
 
 export { 
     HOME_DARK, HOME_WHITE, ABOUT_ME_DARK, ABOUT_ME_WHITE,
@@ -32,6 +34,6 @@ export {
     BOOKS_READ_WHITE, CONTACT_DARK, CONTACT_WHITE,
     ABOUT_ME_HEADER, CONTACT_HEADER, PLACES_VISITED_HEADER, BOOKS_READ_HEADER,
     FACEBOOK, INSTAGRAM, TWITTER, GITHUB, LINKEDIN,
-    DETAILS, FULL_SCREEN, CANCEL,
-    CLOSE
+    DETAILS, FULL_SCREEN, CANCEL, CLOSE,
+    HOME_PROFILE, ABOUT_ME_PROFILE
 }

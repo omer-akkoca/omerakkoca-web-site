@@ -76,7 +76,7 @@
     font-family: monospace;
     font-weight: bold;
     color: var(--dark_text);
-    font-family: "Nunito-Regular" !important;
+    font-family: "Nunito-Regular";
 }
 
 .biography p::first-letter{

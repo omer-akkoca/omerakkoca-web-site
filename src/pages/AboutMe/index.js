@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css"
 import { Container, Footer, Header, Image } from "../../components";
 import { Navbar } from "../../layouts";
-import { ABOUT_ME_HEADER } from "../../assets/images";
+import { ABOUT_ME_HEADER, ABOUT_ME_PROFILE } from "../../assets/images";
 import { FirebaseClient } from "../../requests";
 import moment from "moment/moment";
 import WorkCard from "./subComponents/work-card";
@@ -47,7 +47,7 @@ class AboutMe extends React.Component{
                             <Container>
                                 <div className="biography">
                                     <Image
-                                        src={"https://omerakkoca.netlify.app/static/media/about-avatar.12b4eeee.jpeg"}
+                                        src={ABOUT_ME_PROFILE}
                                         alt={"omer-akkoca"}
                                         width="250"
                                         height="250"

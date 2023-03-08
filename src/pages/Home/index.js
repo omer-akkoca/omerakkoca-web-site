@@ -3,6 +3,7 @@ import "./style.css"
 import { Navbar } from "../../layouts"; 
 import { Container, Image } from "../../components";
 import { FirebaseClient } from "../../requests";
+import { HOME_PROFILE } from "../../assets/images";
 
 class Home extends React.Component{
     
@@ -26,7 +27,7 @@ class Home extends React.Component{
                         <div className="content">
                             <div className="profile-picture">
                                 <Image
-                                    src="https://omerakkoca.netlify.app/static/media/home-avatar.ef57a20f.jpg"
+                                    src={HOME_PROFILE}
                                     alt="omer-akkoca"
                                     width="250"
                                     height="250"
