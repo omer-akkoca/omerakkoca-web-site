@@ -13,7 +13,7 @@ const Header = ({ title, image, text }) => {
     }
 
     return(
-        <div  ref={header}>
+        <div ref={header}>
             <div className="mobile-page-title">
                 <h1>{title}</h1>
             </div>
