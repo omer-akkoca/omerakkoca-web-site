@@ -20,6 +20,75 @@
     align-items: center;
 }
 
+.filter-wrapper{
+    margin: 25px 0 50px 0;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    user-select: none;
+}
+
+.filter{
+    position: relative;
+    background-color: white;
+    min-width: 175px;
+    padding: 8px 12px;
+    color: var(--dark_text);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--more_transparent_dark);
+}
+
+.filter p{
+    color: var(--dark_text);
+    font-size: 14px;
+    font-family: Nunito-Medium;
+    margin-right: 12px;
+}
+
+.filter img{
+    width: 20px;
+    height: auto;
+}
+
+.filter .item-container{
+    position: absolute;
+    bottom: -90.5px;
+    left: -0.5%;
+    width: 101%;
+    height: 90px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--more_transparent_dark);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.item-container span{
+    background-color: white;
+    color: var(--dark_text);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 30px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: Nunito-Medium;
+    font-size: 14px;
+    z-index: 99999;
+}
+
+.item-container span:hover{
+    background-color: #e49a21;
+    color: white;
+}
+
 .book-card{
     position: relative;
     width: var(--card-width);
@@ -182,6 +251,10 @@
 }
 
 @media screen and (min-width: 1750px) {
+    .filter .item-container{
+        left: -1%;
+        width: 101.5%;
+    }
     .books-content{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
