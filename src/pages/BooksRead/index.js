@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./style.css"
-import { BOOKS_READ_HEADER, DOWN_ARROW, UP_ARROW } from "../../assets/images";
+import { BOOKS_READ_HEADER, DOWN_ARROW } from "../../assets/images";
 import { Container, Footer, Header } from "../../components";
 import { Navbar } from "../../layouts";
 //import { FirebaseClient } from "../../requests"
 import BookCard from "./book-card";
-import { getDocs, collection, query, orderBy, where, limit} from "firebase/firestore"
+import { getDocs, collection, query, orderBy, where, limit, getCountFromServer} from "firebase/firestore"
 import { firestore } from "../../library/firebase";
 import { BOOK_STATUS } from "../../constants/status";
 
@@ -16,13 +16,20 @@ Oysaki her kitabın her sayfası bize farklı bir perspektif sunmaz mı. Bir kit
 
 const BooksRead = () => {
 
+    const [totalBook, setTotalBook] = useState(0)
     const [books, setBooks] = useState([])
     const [type, setType] = useState("all")
     const [page, setPage] = useState(1)
-
     const [showTypes, setShowTypes] = useState(false)
 
+    const loadMoreButton = useRef(null)
+
     useEffect(() => window.scrollTo(0,0), [])
+
+    useEffect(() => {
+        getCountFromServer(collection(firestore, "books-read"))
+        .then(resp => setTotalBook(resp.data().count))
+    }, [])
 
     useEffect(() => {
         getDocs(query(
@@ -34,6 +41,11 @@ const BooksRead = () => {
             setBooks(books)
         })
     }, [type, page])
+
+    const handlePagination = () => {
+        window.scrollTo(0, window.scrollY + 99999)
+        setPage(prev => prev + 1)
+    }
 
     return(
         <section id="books-read">
@@ -75,9 +87,17 @@ const BooksRead = () => {
                             ))
                         }
                     </div>
-                    <div className="load-more-wrapper">
-                        <button onClick={() => setPage(prev => prev + 1)} className="custom-button">Load More</button>
-                    </div>
+                    {
+                        !(page * 12 > totalBook) && (
+                            <div className="load-more-wrapper">
+                                <button
+                                    onClick={handlePagination}
+                                    className="custom-button"
+                                    ref={loadMoreButton}
+                                >Load More</button>
+                            </div>
+                        )
+                    }
                 </Container>
             </div>
             <Footer/>
