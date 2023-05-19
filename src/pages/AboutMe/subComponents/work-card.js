@@ -4,8 +4,8 @@ import 'moment/locale/tr';
 
 const WorkCard = ({ work }) => {
     return(
-        <CardWrapper className="flex flex-row shadow-sm shadow-transparent_dark p-5 bg-white">
-            <ImageWrapper className="bg-red-400">
+        <CardWrapper>
+            <ImageWrapper>
                 <Image
                     src={work.img}
                     alt={work.title}

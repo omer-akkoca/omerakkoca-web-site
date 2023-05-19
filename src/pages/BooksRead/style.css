@@ -1,6 +1,7 @@
 :root{
     --card-width: 213.88px;
     --card-height: 333.33px;
+    --book-orange: #e49a21;
 }
 
 .books-read-wrapper{
@@ -12,6 +13,7 @@
     grid-template-columns: 1fr;
     grid-gap: 25px;
     grid-row-gap: 50px;
+    margin-bottom: 50px;
 }
 
 .books-card-wrapper{
@@ -85,7 +87,7 @@
 }
 
 .item-container span:hover{
-    background-color: #e49a21;
+    background-color: var(--book-orange);
     color: white;
 }
 
@@ -196,6 +198,17 @@
     font-family: "Nunito-Medium";
 }
 
+.load-more-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.load-more-wrapper .custom-button{
+    width: 85%;
+}
 @media screen and (max-width: 325px) {
     :root{
         --card-width: 195px;
@@ -222,12 +235,18 @@
     :root{
         --card-width: 213.88px;
         --card-height: 333.33px;
-    }    
+    }
+    .load-more-wrapper .custom-button{
+        width: 250px;
+    }
 }
 
 @media screen and (min-width: 800px) {
     .books-content{
         grid-template-columns: 1fr 1fr;
+    }
+    .load-more-wrapper .custom-button{
+        width: 500px;
     }
 }
 
@@ -241,6 +260,9 @@
     }
     .book-card .back-face p{
         font-size: 16px;
+    }
+    .books-content{
+        margin-bottom: 75px;
     }
 }
 

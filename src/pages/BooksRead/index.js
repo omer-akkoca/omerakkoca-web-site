@@ -5,7 +5,7 @@ import { Container, Footer, Header } from "../../components";
 import { Navbar } from "../../layouts";
 //import { FirebaseClient } from "../../requests"
 import BookCard from "./book-card";
-import { getDocs, collection, query, orderBy, where} from "firebase/firestore"
+import { getDocs, collection, query, orderBy, where, limit} from "firebase/firestore"
 import { firestore } from "../../library/firebase";
 import { BOOK_STATUS } from "../../constants/status";
 
@@ -22,15 +22,18 @@ const BooksRead = () => {
 
     const [showTypes, setShowTypes] = useState(false)
 
-    //useEffect(() => window.scrollTo(0,0), [])
+    useEffect(() => window.scrollTo(0,0), [])
 
     useEffect(() => {
-        getDocs(query(collection(firestore, "books-read"), where("type",`array-contains`,type), orderBy("id")))
+        getDocs(query(
+            collection(firestore, "books-read"),
+            where("type",`array-contains`,type), orderBy("id"), limit(page * 12)
+        ))
         .then((snapshot) => {
             const books = snapshot.docs.map(x => ({ id: x.id, ...x.data() }))
             setBooks(books)
         })
-    }, [type])
+    }, [type, page])
 
     return(
         <section id="books-read">
@@ -54,7 +57,10 @@ const BooksRead = () => {
                                     <div className="item-container">
                                         {
                                             BOOK_STATUS.map((e, i) => (
-                                                <span onClick={() => setType(e.key)} key={i} value={e.key}>{e.label}</span>
+                                                <span onClick={() => {
+                                                    setType(e.key)
+                                                    setPage(1)
+                                                }} key={i} value={e.key}>{e.label}</span>
                                             ))
                                         }
                                     </div>
@@ -68,6 +74,9 @@ const BooksRead = () => {
                                 <BookCard key={e.id} data={e}/>
                             ))
                         }
+                    </div>
+                    <div className="load-more-wrapper">
+                        <button onClick={() => setPage(prev => prev + 1)} className="custom-button">Load More</button>
                     </div>
                 </Container>
             </div>
