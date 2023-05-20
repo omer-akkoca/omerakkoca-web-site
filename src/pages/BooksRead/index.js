@@ -27,9 +27,12 @@ const BooksRead = () => {
     useEffect(() => window.scrollTo(0,0), [])
 
     useEffect(() => {
-        getCountFromServer(collection(firestore, "books-read"))
+        getCountFromServer(query(
+            collection(firestore, "books-read"),
+            where("type",`array-contains`,type)
+        ))
         .then(resp => setTotalBook(resp.data().count))
-    }, [])
+    }, [type])
 
     useEffect(() => {
         getDocs(query(
@@ -43,7 +46,6 @@ const BooksRead = () => {
     }, [type, page])
 
     const handlePagination = () => {
-        window.scrollTo(0, window.scrollY + 99999)
         setPage(prev => prev + 1)
     }
 
