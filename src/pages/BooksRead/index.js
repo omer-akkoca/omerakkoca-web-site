@@ -50,7 +50,7 @@ const BooksRead = () => {
     return(
         <section id="books-read">
             <Navbar />
-            <Header title="books read" text={xd} image={BOOKS_READ_HEADER}/>
+            <Header title="okunan kitaplar" text={xd} image={BOOKS_READ_HEADER}/>
             <div className="books-read-wrapper">
                 <Container>
                     <div className="filter-wrapper">

@@ -37,7 +37,7 @@ class Contact extends React.Component{
             <section id="contact">
                 <Navbar />
                 <div className="seperate-contact">
-                    <Header title={"contact"} image={CONTACT_HEADER} text={xd} />
+                    <Header title={"iletişim"} image={CONTACT_HEADER} text={xd} />
                     <div className="content-wrapper">
                         <Container>
                             <div className="contact-content">

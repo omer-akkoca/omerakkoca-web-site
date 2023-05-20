@@ -29,7 +29,7 @@ class PlacesVisited extends React.Component{
             <section id="places-visited">
                 <Navbar/>
                 <Modal/>
-                <Header title={"Places Visited"} image={PLACES_VISITED_HEADER} text={xd} />
+                <Header title={"seyehat yerleri"} image={PLACES_VISITED_HEADER} text={xd} />
                 <div className="visited-content-wrapper">
                     <Container>
                         <div className="visited-content">

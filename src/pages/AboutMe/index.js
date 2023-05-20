@@ -40,7 +40,7 @@ class AboutMe extends React.Component{
         return (
             <section id="about-me">
                 <Navbar />
-                <Header title={"about me"} image={ABOUT_ME_HEADER} text={xd}/>
+                <Header title={"hakkımda"} image={ABOUT_ME_HEADER} text={xd}/>
                 <div className="about-me-wrapper">
                     <div className="about-content">
                         <div className="element biography-wrapper">
