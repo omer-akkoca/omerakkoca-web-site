@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardWrapper = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-shadow: 1px 1px 9px -5px var(--transparent_dark);
     padding: 4%;
     background-color: white;
@@ -10,11 +10,10 @@ export const CardWrapper = styled.div`
     overflow: hidden;
 `
 
-export const ImageWrapper = styled.div`
+export const TopWrapper = styled.div`
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: start;
-    margin-right: 3%;
 `
 
 export const Image = styled.img`
@@ -22,6 +21,7 @@ export const Image = styled.img`
     width: 40px;
     object-fit: cover;
     border-radius: 100%;
+    margin-right: 25PX;
     @media (min-width: 475px) {
         height: 60px;
         width: 60px;
@@ -32,6 +32,11 @@ export const DescWrapper = styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
+    margin-top: 15px;
+    @media (min-width: 475px) {
+        padding-left: 85px;
+        margin-top: 0;
+    }
 `
 
 export const Title = styled.h1`
@@ -39,7 +44,6 @@ export const Title = styled.h1`
     font-family: "Nunito-Black";
     color: ${({color}) => color ? color : "red"};
     text-transform: capitalize;
-    padding: 0 0 2.5% 0;
     @media (min-width: 475px) {
         font-size: 1.3em;
     }

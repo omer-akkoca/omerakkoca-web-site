@@ -1,22 +1,21 @@
 import React from "react";
-import { CardWrapper, Description, DescWrapper, Image, ImageWrapper, Time, Title } from "./style";
-import 'moment/locale/tr';
+import { CardWrapper, Description, DescWrapper, Image, TopWrapper, Time, Title } from "./style";
 
 const WorkCard = ({ work }) => {
     return(
         <CardWrapper>
-            <ImageWrapper>
+            <TopWrapper>
                 <Image
                     src={work.img}
                     alt={work.title}
                 />
-            </ImageWrapper>
-            <DescWrapper>
                 <Title color={work.color}>{work.title}</Title>
+            </TopWrapper>
+            <DescWrapper>
                 <Description>{work.desc}</Description>
                 <Time>
                     {work.started_at} - {" "}
-                    {work.finished_at ? work.finished_at : "Devam ediyor"}
+                    {work.finished_at}
                 </Time>
             </DescWrapper>
         </CardWrapper>
