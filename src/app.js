@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Home, AboutMe, PlacesVisited, BooksRead, Contact, NotFound } from "./pages"
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./library/firebase";
 
 const App = () => {
+
+    useEffect(() => {
+        signInWithEmailAndPassword(auth, "omerakkoca1042@gmail.com", "Ronaldo>messi")
+    }, [])
+
     return(
         <Routes>
             <Route path="/" element={<Home/>}/>

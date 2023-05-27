@@ -167,6 +167,7 @@
 
 .book-card .back-face h1{
     font-size: 18px !important;
+    line-height: 25px;
     letter-spacing: 1px;
     font-family: "Nunito-Black";
 }
