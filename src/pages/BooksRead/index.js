@@ -90,7 +90,7 @@ const BooksRead = () => {
                         }
                     </div>
                     {
-                        !(page * 12 > totalBook) && (
+                        !(page * 12 >= totalBook) && (
                             <div className="load-more-wrapper">
                                 <button
                                     onClick={handlePagination}
