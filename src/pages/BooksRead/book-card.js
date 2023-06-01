@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image } from "../../components";
 
 const BookCard = ({ data }) => {
+
+    const [readMore, setReadMore] = useState(false)
+
     return(
         <div className="books-card-wrapper">
             <div className="book-card">
@@ -19,7 +22,16 @@ const BookCard = ({ data }) => {
                         <h2>{data.writer}</h2>
                         <div className="line"/>
                         <h3>{data.startDay} - {data.endDay}</h3>
-                        <p>{data.text}</p>
+                        {
+                            data.text.length > 100
+                            ?   (
+                                <p>
+                                    {data.text.slice(0,readMore ? 9999 : 100) + " "}
+                                    {!readMore && (<span onClick={() => setReadMore(true)}>Read More...</span>)}
+                                </p>
+                            )
+                            :   <p>{data.text}</p>
+                        }
                     </div>
                 </div>
             </div>

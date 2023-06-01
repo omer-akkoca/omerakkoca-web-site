@@ -150,13 +150,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
+    padding: 15px 15px;
+    background-color: var(--transparent_dark) !important;
+}
+
+.book-card .back-face::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--transparent_dark);
+    z-index: -1;
 }
 
 .book-card .back-face .back-face-content{
     width: 100%;
     height: 100%;
-    background-color: var(--transparent_dark);
-    padding: 10px 15px;
     overflow-y: auto;
     text-align: center;
 }
@@ -181,10 +192,11 @@
 }
 
 .book-card .back-face .line{
-    width: 100%;
+    width: 95%;
     height: 1px;
     border-radius: 99px;
     background-color: white;
+    margin: inherit auto;
 }
 
 .book-card .back-face h3{
@@ -197,6 +209,16 @@
     font-size: 14px;
     font-weight: 400;
     font-family: "Nunito-Medium";
+    padding: 0 8px;
+}
+
+.book-card .back-face p span{
+    font-family: "Nunito-Bold";
+    transition: var(--transition);
+}
+
+.book-card .back-face p span:hover{
+    color: #e49a21;
 }
 
 .load-more-wrapper{
