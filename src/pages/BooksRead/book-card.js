@@ -23,10 +23,10 @@ const BookCard = ({ data }) => {
                         <div className="line"/>
                         <h3>{data.startDay} - {data.endDay}</h3>
                         {
-                            data.text.length > 100
+                            data.text.length > 150
                             ?   (
                                 <p>
-                                    {data.text.slice(0,readMore ? 9999 : 100) + " "}
+                                    {data.text.slice(0,readMore ? 9999 : 150) + " "}
                                     {!readMore && (<span onClick={() => setReadMore(true)}>Read More...</span>)}
                                 </p>
                             )

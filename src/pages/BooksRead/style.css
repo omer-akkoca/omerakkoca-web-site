@@ -197,6 +197,7 @@
     border-radius: 99px;
     background-color: white;
     margin: inherit auto;
+    margin: 8px 0;
 }
 
 .book-card .back-face h3{
@@ -271,6 +272,9 @@
     .load-more-wrapper .custom-button{
         width: 500px;
     }
+    .book-card .back-face .line{
+        margin: 12px 0;
+    }
 }
 
 @media screen and (min-width: 1100px) {
@@ -292,6 +296,9 @@
 @media screen and (min-width: 1250px) {
     .books-content{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .book-card .back-face .line{
+        margin: 14px 0;
     }
 }
 
