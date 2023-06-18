@@ -22,16 +22,7 @@ const BookCard = ({ data }) => {
                         <h2>{data.writer}</h2>
                         <div className="line"/>
                         <h3>{data.startDay} - {data.endDay}</h3>
-                        {
-                            data.text.length > 150
-                            ?   (
-                                <p>
-                                    {data.text.slice(0,readMore ? 9999 : 150) + " "}
-                                    {!readMore && (<span onClick={() => setReadMore(true)}>Read More...</span>)}
-                                </p>
-                            )
-                            :   <p>{data.text}</p>
-                        }
+                        <p>{data.text}</p>
                     </div>
                 </div>
             </div>
