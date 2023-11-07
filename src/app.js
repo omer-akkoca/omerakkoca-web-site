@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Home, AboutMe, PlacesVisited, BooksRead, Contact, NotFound } from "./pages"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./library/firebase";
+import "moment/locale/tr"
 
 const App = () => {
 
