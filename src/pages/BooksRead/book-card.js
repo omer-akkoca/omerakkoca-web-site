@@ -24,7 +24,7 @@ const BookCard = ({ data }) => {
                         height="333.33"
                     />
                 </div>
-                <div className="back-face" style={{ backgroundImage: `url(${data.img})` }}>
+                <div className="back-face" style={{ backgroundImage: `url(${data.image})` }}>
                     <div className="back-face-content">
                         <h1>{data.title}</h1>
                         <h2>{data.author}</h2>

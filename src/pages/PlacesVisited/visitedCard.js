@@ -28,12 +28,16 @@ const VisitedCard = ({ data, openModal }) => {
                     height="250"
                 />
                 <div className="buttons">
-                    <div onClick={handleToggleDesc}>
-                        <Image
-                            src={DETAILS}
-                            alt="details"
-                        />
-                    </div>
+                    {
+                        /*
+                            <div onClick={handleToggleDesc}>
+                                <Image
+                                    src={DETAILS}
+                                    alt="details"
+                                />
+                            </div>
+                        */
+                    }
                     <div onClick={() => openModal(data?.img)}>
                         <Image
                             src={FULL_SCREEN}
