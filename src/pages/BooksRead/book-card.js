@@ -7,9 +7,12 @@ const BookCard = ({ data }) => {
     const start = useMemo(() => data?.started_at.toDate(), [data])
     const end = useMemo(() => {
         if (data.ended_at) {
-            return moment(data.ended_at.toDate()).format('Do/MM/YYYY')
+            if ("forever") {
+                return "∞";
+            }
+            return moment(data.ended_at.toDate()).format('Do/MM/YYYY');
         } else {
-            return "Devam Ediyor"
+            return "Devam Ediyor";
         }
     }, [data])
 
