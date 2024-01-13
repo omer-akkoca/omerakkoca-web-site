@@ -200,6 +200,22 @@
     margin: 8px 0;
 }
 
+.book-card .back-face .back-face-content .forever-book{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-card .back-face .back-face-content .forever-book h3{
+    margin-bottom: 0;
+}
+
+.book-card .back-face .back-face-content .forever-book img{
+    width: 24px;
+    height: auto;
+    margin-left: 4px;
+}
+
 .book-card .back-face h3{
     font-size: 14px;
     font-weight: 500;

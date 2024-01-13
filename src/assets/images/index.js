@@ -25,7 +25,7 @@ import FULL_SCREEN from "./full-screen.png"
 import CANCEL from "./cancel.png"
 import CLOSE from "./close.png"
 import DOWN_ARROW from "./down-arrow.png"
-
+import UNLIMITED from "./unlimited.webp"
 
 import HOME_PROFILE from "./home-profile.jpeg"
 import ABOUT_ME_PROFILE from "./about-me-profile.jpeg"
@@ -37,5 +37,5 @@ export {
     ABOUT_ME_HEADER, CONTACT_HEADER, PLACES_VISITED_HEADER, BOOKS_READ_HEADER,
     FACEBOOK, INSTAGRAM, TWITTER, GITHUB, LINKEDIN,
     DETAILS, FULL_SCREEN, CANCEL, CLOSE,
-    HOME_PROFILE, ABOUT_ME_PROFILE, DOWN_ARROW
+    HOME_PROFILE, ABOUT_ME_PROFILE, DOWN_ARROW, UNLIMITED
 }

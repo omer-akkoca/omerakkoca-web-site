@@ -1,14 +1,16 @@
 import React, { useMemo } from "react";
 import { Image } from "../../components";
 import moment from "moment";
+import { UNLIMITED } from "../../assets/images";
 
 const BookCard = ({ data }) => {
 
     const start = useMemo(() => data?.started_at.toDate(), [data])
     const end = useMemo(() => {
         if (data.ended_at) {
-            if ("forever") {
-                return "∞";
+            console.log(data.ended_at)
+            if (data.ended_at === "forever") {
+                return "forever";
             }
             return moment(data.ended_at.toDate()).format('Do/MM/YYYY');
         } else {
@@ -32,7 +34,17 @@ const BookCard = ({ data }) => {
                         <h1>{data.title}</h1>
                         <h2>{data.author}</h2>
                         <div className="line"/>
-                        <h3>{`${moment(start).format('Do/MM/YYYY')} - ${end}`}</h3>
+                        {
+                            end === "forever"
+                            ?   <div className="forever-book">
+                                    <h3>{`${moment(start).format('Do/MM/YYYY')} - `}</h3>
+                                    <img
+                                        src={UNLIMITED}
+                                        alt="unlimited"
+                                    />   
+                                </div>
+                            :   <h3>{`${moment(start).format('Do/MM/YYYY')} - ${end}`}</h3>   
+                        }
                         <p>{data.description}</p>
                     </div>
                 </div>
