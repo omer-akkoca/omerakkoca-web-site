@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./style.css"
-import { DETAILS, FULL_SCREEN, CANCEL } from "../../assets/images";
+import { FULL_SCREEN, CANCEL } from "../../assets/images";
 import { Image } from "../../components";
 
 const VisitedCard = ({ data, openModal }) => {

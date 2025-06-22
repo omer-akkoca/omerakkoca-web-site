@@ -27,7 +27,6 @@ const BooksRead = () => {
         .then((snapshot) => {
             const books = snapshot.docs.map(x => ({ id: x.id, ...x.data() }))
             setBooks(books.reverse())
-            console.log(books.length)
         })
     }, [])
 
